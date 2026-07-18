@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: tolu.tconnect.com.ng
+Sitemap: https://tolu.tconnect.com.ng/sitemap.xml

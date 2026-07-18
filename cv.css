@@ -1,0 +1,472 @@
+/* ============================================================
+   CV PAGE — dedicated styles
+   Builds on top of style.css tokens and base classes
+   ============================================================ */
+
+/* ─── CV HERO ─────────────────────────────────────────────── */
+.cv-hero {
+    padding: 72px 0 64px;
+}
+
+.cv-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+    gap: 32px;
+    align-items: start;
+}
+
+/* ─── IDENTITY ────────────────────────────────────────────── */
+.cv-name {
+    margin: 14px 0 18px;
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 5.4rem);
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    color: var(--text);
+}
+
+.cv-name-accent {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--amber) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cv-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.cv-summary {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 58ch;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.cv-badges {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px;
+    border-radius: 99px;
+    background: rgba(52, 211, 153, 0.06);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    margin-bottom: 28px;
+}
+
+.cv-status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.18);
+    animation: pulseDot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+.cv-status-text {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.cv-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ─── QUICK FACTS CARD ──────────────────────────────────────── */
+.cv-fact-card {
+    padding: 28px;
+    border-radius: var(--radius-xl);
+    background: rgba(18, 18, 30, 0.82);
+    border: 1px solid var(--line-bright);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-card);
+    position: sticky;
+    top: 88px;
+}
+
+.cv-fact-list {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: grid;
+    gap: 0;
+}
+
+.cv-fact-list li {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 12px;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.88rem;
+}
+
+.cv-fact-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cv-fact-label {
+    color: var(--text-dim);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.cv-fact-val {
+    color: var(--text-muted);
+    word-break: break-word;
+}
+
+.cv-link {
+    color: var(--accent);
+    transition: opacity 0.2s;
+}
+.cv-link:hover { opacity: 0.75; }
+
+/* ─── SKILLS GRID ──────────────────────────────────────────── */
+.cv-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cv-skill-card {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-bright);
+    background: var(--surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.28s var(--ease-spring), box-shadow 0.28s var(--ease-out), border-color 0.25s;
+}
+
+.cv-skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card), 0 0 36px rgba(200, 255, 0, 0.14);
+    border-color: rgba(200, 255, 0, 0.28);
+}
+
+.cv-skill-icon {
+    width: 48px; height: 48px;
+    border-radius: var(--radius-md);
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: var(--accent-soft);
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.cv-icon-web  { background: rgba(200, 255, 0, 0.12); color: var(--accent); font-family: monospace; font-size: 0.85rem; letter-spacing: -0.05em; }
+.cv-icon-seo  { background: rgba(245, 158, 11, 0.10); color: var(--amber); }
+.cv-icon-video { background: rgba(16, 185, 129, 0.10); color: #34d399; }
+.cv-icon-social { background: rgba(139, 92, 246, 0.12); color: #c4b5fd; }
+
+.cv-skill-card h3 {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin: 0 0 10px;
+    line-height: 1.3;
+}
+
+.cv-skill-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ─── EXPERIENCE TIMELINE ─────────────────────────────────── */
+.cv-timeline {
+    display: grid;
+    gap: 0;
+    position: relative;
+}
+
+.cv-timeline-item {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 24px;
+    padding-bottom: 48px;
+    position: relative;
+}
+
+.cv-timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.cv-timeline-line {
+    position: absolute;
+    left: 13px; top: 28px; bottom: 0;
+    width: 1px;
+    background: var(--line-bright);
+}
+
+.cv-timeline-item:last-child .cv-timeline-line {
+    display: none;
+}
+
+.cv-timeline-dot {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: var(--bg);
+    box-shadow: 0 0 0 4px rgba(200, 255, 0, 0.15);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 2px;
+}
+
+.cv-timeline-body {
+    padding-top: 4px;
+}
+
+.cv-timeline-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.cv-timeline-year {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.cv-timeline-type {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    padding: 3px 10px;
+    border-radius: 99px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--line);
+}
+
+.cv-timeline-body h3 {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 0 0 10px;
+    line-height: 1.3;
+}
+
+.cv-timeline-body p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.cv-bullet-list {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.cv-bullet-list li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.cv-bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 9px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.7;
+}
+
+/* ─── SERVICES ROW ─────────────────────────────────────────── */
+.cv-services-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.cv-service-item {
+    padding: 28px 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-bright);
+    background: var(--surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.28s var(--ease-spring), box-shadow 0.28s var(--ease-out), border-color 0.25s;
+}
+
+.cv-service-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(200, 255, 0, 0.28);
+    box-shadow: var(--shadow-card), 0 0 30px rgba(200, 255, 0, 0.12);
+}
+
+.cv-service-num {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-bottom: 14px;
+    opacity: 0.7;
+}
+
+.cv-service-item h3 {
+    font-size: 1rem;
+    color: var(--text);
+    margin: 0 0 10px;
+    line-height: 1.35;
+}
+
+.cv-service-item p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ─── FAQ GRID ─────────────────────────────────────────────── */
+.cv-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cv-faq-item {
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-bright);
+    background: var(--surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-card);
+    transition: border-color 0.25s;
+}
+
+.cv-faq-item:hover {
+    border-color: rgba(200, 255, 0, 0.28);
+}
+
+.cv-faq-item h3 {
+    font-size: 0.98rem;
+    color: var(--text);
+    margin: 0 0 10px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.cv-faq-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ─── CTA BLOCK ────────────────────────────────────────────── */
+.cv-cta-section {
+    padding: 64px 0 80px;
+}
+
+.cv-cta-block {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cv-cta-block .eyebrow {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.cv-cta-block h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    color: var(--text);
+    margin: 0 0 16px;
+}
+
+.cv-cta-block p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 28px;
+}
+
+.cv-cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.cv-cta-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-dim);
+    font-size: 0.88rem;
+}
+
+.cv-text-link {
+    color: var(--accent);
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+.cv-text-link:hover { opacity: 0.7; }
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 1080px) {
+    .cv-services-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .cv-hero-inner { grid-template-columns: 1fr; }
+    .cv-fact-card { position: static; }
+    .cv-skills-grid { grid-template-columns: 1fr; }
+    .cv-faq-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+    .cv-hero { padding: 40px 0 48px; }
+    .cv-name { font-size: clamp(2.2rem, 12vw, 3.2rem); }
+    .cv-skills-grid { gap: 14px; }
+    .cv-skill-card { grid-template-columns: 1fr; }
+    .cv-skill-icon { width: 42px; height: 42px; }
+    .cv-services-row { grid-template-columns: 1fr; gap: 12px; }
+    .cv-timeline-item { grid-template-columns: 24px 1fr; gap: 16px; }
+    .cv-cta-actions { flex-direction: column; align-items: center; }
+}
