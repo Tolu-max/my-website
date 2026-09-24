@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank you — Message received | Toluwalope Oyelola</title>
     <meta name="description" content="Thank you page for portfolio contact submissions.">
     <meta name="robots" content="noindex,follow">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/thank-you.html">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/thank-you.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Thank you — Message received">
     <meta property="og:description" content="Your message has been received.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/thank-you.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta property="og:url" content="https://toluoyelola.cv/thank-you.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

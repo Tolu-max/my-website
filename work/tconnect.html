@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TConnect VTU &amp; Utility Billing — Technical Case Study by Toluwalope Oyelola</title>
+    <meta name="description" content="A technical case study of TConnect: Laravel and MySQL wallet ledgers, Paystack and Monnify integrations, provider webhooks, and 3,000+ transactions processed before the service went offline.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/work/tconnect.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="TConnect VTU Technical Case Study — Toluwalope Oyelola">
+    <meta property="og:description" content="How I built TConnect's Laravel and MySQL wallet ledger, payment integrations, and provider webhook flows. The service is now offline; the case study preserves the engineering work.">
+    <meta property="og:url" content="https://toluoyelola.cv/work/tconnect.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "TConnect VTU Platform Technical Case Study",
+      "author": {
+        "@type": "Person",
+        "name": "Toluwalope Samuel Oyelola"
+      },
+      "description": "Architecture and settlement workflows of the TConnect fintech platform."
+    }
+    </script>
+</head>
+<body>
+
+    <!-- PAGE PRELOADER -->
+    <div id="page-preloader">
+        <div class="preloader-symbol">T</div>
+        <div class="preloader-counter" id="preloader-counter">0%</div>
+        <div class="preloader-bar-wrap">
+            <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- TOP SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
+
+
+
+    <!-- CUSTOM INTERACTIVE CURSOR -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-follower" id="cursor-follower"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="brand" aria-label="Toluwalope Oyelola Homepage">
+
+                <div class="brand-text">
+                    <strong>Toluwalope Oyelola</strong>
+                    <span>Full Stack Developer</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary Navigation">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../work.html" class="nav-link active">Work</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="../contact.html" class="btn-primary">Get in touch</a>
+                <button type="button" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-drawer" id="mobile-drawer">
+        <a href="../index.html">Home</a>
+        <a href="../work.html">Work &amp; Case Studies</a>
+        <a href="../about.html">About &amp; Background</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+
+    <main>
+        <article>
+            <header class="case-study-header">
+                <div class="container">
+                    <a href="../work.html" class="arrow-link" style="margin-bottom: 20px; display: inline-block;">&larr; Back to Work</a>
+                    <br>
+                    <span class="eyebrow eyebrow-active">Archived Production Case Study &bull; Fintech</span>
+                    <h1 class="case-study-title">TConnect VTU &amp; Utility Billing Engine</h1>
+                    <p class="case-study-lead">
+                        An automated digital infrastructure built to process high-frequency virtual top-ups, electricity utility bills, data subscriptions, and multi-network telecom services with sub-second wallet reconciliation.
+                    </p>
+
+                    <div class="case-meta-grid">
+                        <div class="case-meta-item">
+                            <span>Core Role</span>
+                            <strong>Solo Full-Stack Engineer &amp; Architect</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Stack</span>
+                            <strong>Laravel (PHP), MySQL, REST APIs, JS</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Historic production metric</span>
+                            <strong>3,000+ Verified Transactions</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Service status</span>
+                            <strong>Production platform offline</strong>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container case-body">
+                <div class="case-hero-media" style="border: 1px solid var(--line-strong); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 48px;">
+                    <img src="../img/tconnect.png" alt="TConnect production landing and dashboard interface" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                </div>
+
+                <section class="case-section">
+                    <h2>01 / The Challenge &amp; Problem Space</h2>
+                    <p>
+                        In the Nigerian telecom ecosystem, Virtual Top-Up (VTU) platforms face unpredictable aggregator latency, network drops, and customer disputes when transactions fail midway.
+                    </p>
+                    <p>
+                        The goal was to build a resilient service layer capable of handling wallet top-ups, dispatching API requests to telecommunication gateways, receiving asynchronous verification webhooks, and preventing double-debits through rigorous database transaction boundaries.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h2>02 / System Architecture &amp; Transaction Flow</h2>
+                    <p>
+                        Every transaction adheres to an explicit state lifecycle. Funds are locked in MySQL within an isolated transaction before calling external providers.
+                    </p>
+
+                    <div class="arch-diagram reveal-on-scroll">
+                        <span class="font-mono" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); display: block; margin-bottom: 16px;">Verified Transaction Lifecycle</span>
+                        <div class="arch-flow" role="list" aria-label="TConnect transaction stages">
+                            <div class="arch-step" role="listitem">
+                                <span>Step 1</span>
+                                <strong>User Request</strong>
+                                <small>Order received</small>
+                            </div>
+                            <span class="arch-arrow" aria-hidden="true">&rarr;</span>
+                            <div class="arch-step" role="listitem">
+                                <span>Step 2</span>
+                                <strong>DB Transaction Lock</strong>
+                                <small>Funds reserved</small>
+                            </div>
+                            <span class="arch-arrow" aria-hidden="true">&rarr;</span>
+                            <div class="arch-step" role="listitem">
+                                <span>Step 3</span>
+                                <strong>Provider Dispatch</strong>
+                                <small>Request sent</small>
+                            </div>
+                            <span class="arch-arrow" aria-hidden="true">&rarr;</span>
+                            <div class="arch-step" role="listitem">
+                                <span>Step 4</span>
+                                <strong>Webhook Verify</strong>
+                                <small>Delivery checked</small>
+                            </div>
+                            <span class="arch-arrow" aria-hidden="true">&rarr;</span>
+                            <div class="arch-step" role="listitem">
+                                <span>Step 5</span>
+                                <strong>Settlement</strong>
+                                <small>Ledger updated</small>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>03 / Key Implementation Decisions</h2>
+                    <div class="feature-list">
+                        <div class="feature-list-item">
+                            <span>Wallet Ledger System</span>
+                            <span>Engineered with row-level transaction locks in MySQL to prevent race conditions during rapid concurrent requests.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Webhook Ingestion</span>
+                            <span>Equipped with HMAC signature verification and idempotency keys to ensure vendor status updates are processed exactly once.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Automated Failover</span>
+                            <span>Provider routing that redirects orders to backup telecommunication gateways if primary API response times exceed thresholds.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Administrative Control</span>
+                            <span>Comprehensive back-office panel providing live transaction logs, automated ledger reconciliation, and manual dispute resolution.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>04 / Real-World Outcome</h2>
+                    <p>
+                        Before the service went offline, TConnect processed more than <strong>3,000 real transactions</strong> across MTN, Airtel, Glo, 9mobile, DStv, GOtv, and electricity providers. The platform included wallet-ledger safeguards and automated payment verification.
+                    </p>
+                </section>
+
+                <div style="padding: 32px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 48px;">
+                    <a href="aimuj.html" class="arrow-link">Next Case Study: Aimuj Platform &rarr;</a>
+                    <span class="project-status-note">TConnect production service is offline</span>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Toluwalope Samuel Oyelola</h3>
+                    <p>Full-stack &amp; product engineer building resilient backend systems, database schemas, and digital interfaces.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../work.html">Work</a></li>
+                            <li><a href="../about.html">About</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Case Studies</h4>
+                        <ul>
+                            <li><a href="tconnect.html">TConnect VTU</a></li>
+                            <li><a href="aimuj.html">Aimuj Platform</a></li>
+                            <li><a href="edupulse.html">EduPulse EdTech</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Channels</h4>
+                        <ul>
+                            <li><a href="https://github.com/Tolu-max" target="_blank" rel="noopener">GitHub &nearr;</a></li>
+                            <li><a href="https://www.linkedin.com/in/tolu-oyelola-797154391" target="_blank" rel="noopener">LinkedIn &nearr;</a></li>
+                            <li><a href="mailto:toluoyelola066@gmail.com">Email Direct</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Toluwalope Samuel Oyelola. Built with intentional simplicity.</span>
+                <span>Available for Remote Roles Worldwide</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

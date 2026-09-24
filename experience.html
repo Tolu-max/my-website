@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience — Toluwalope Oyelola, Remote Full Stack Developer</title>
-    <meta name="description" content="Professional experience of Toluwalope Oyelola in full stack web development, Laravel, technical SEO, and frontend mentoring.">
+    <title>Developer Experience | Toluwalope Oyelola</title>
+    <meta name="description" content="Review Toluwalope Oyelola's experience building Laravel and e-commerce platforms, improving technical SEO, and mentoring frontend developers.">
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/experience.html">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/experience.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Experience — Toluwalope Oyelola">
     <meta property="og:description" content="Web development and SEO experience across product builds, ecommerce systems and tutoring.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/experience.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta property="og:url" content="https://toluoyelola.cv/experience.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Experience — Toluwalope Oyelola">
     <meta name="twitter:description" content="Remote Full Stack Developer with Laravel, PHP, JavaScript, and SEO experience.">
-    <meta name="twitter:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta name="twitter:image" content="https://toluoyelola.cv/img/tconnect.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,48 +98,60 @@
     <main class="section">
         <div class="container page-shell">
             <header class="page-header sa-fade-up">
-                <span class="eyebrow">Experience</span>
-                <h1 class="page-title sa-word">Hands-on delivery across web and SEO.</h1>
-                <p class="page-subtitle sa-slide-up">I work remotely with businesses and teams that need reliable, business-focused engineering. My experience blends product builds, ecommerce execution and SEO implementation.</p>
+                <span class="eyebrow">Work History</span>
+                <h1 class="page-title sa-word">Professional Experience</h1>
+                <p class="page-subtitle sa-slide-up">Full stack engineering, platform development, and technical SEO delivery for real businesses and client applications.</p>
             </header>
 
             <section class="three-column sa-stagger-row">
                 <article class="timeline-card sa-stagger-item">
-                    <span class="eyebrow">2023 — Present</span>
+                    <span class="eyebrow">Aug 2023 — Present</span>
                     <h3>Full Stack Developer &amp; Marketing Assistant</h3>
-                    <p class="body-copy"><strong>AAIPhones</strong></p>
-                    <p class="body-copy">Led website development and maintenance using Laravel. Supported technical updates tied to business goals, including SEO-conscious improvements.</p>
+                    <p class="body-copy"><strong>AAIPhones</strong> · Remote / Hybrid</p>
+                    <ul class="mini-list" style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-muted); padding-left: 0; list-style: none;">
+                        <li>• Built and maintained the company e-commerce platform for mobile device sales using Laravel and MySQL.</li>
+                        <li>• Implemented product cataloguing, dynamic cart workflows, and mobile-first responsive interfaces.</li>
+                        <li>• Optimized page structure, Core Web Vitals, and on-page technical SEO, improving organic visibility and conversion.</li>
+                    </ul>
                 </article>
                 <article class="timeline-card sa-stagger-item">
                     <span class="eyebrow">2024 — Present</span>
-                    <h3>SEO Specialist</h3>
-                    <p class="body-copy"><strong>Guru Web Design &amp; SEO</strong></p>
-                    <p class="body-copy">Handled local SEO for multiple businesses — listing improvements, profile optimization, and technical visibility work.</p>
+                    <h3>Founder &amp; Full Stack Developer</h3>
+                    <p class="body-copy"><strong>TConnect</strong> · Archived production project</p>
+                    <ul class="mini-list" style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-muted); padding-left: 0; list-style: none;">
+                        <li>• Designed and engineered an automated utility bills &amp; data VTU application handling 3,000+ real transactions.</li>
+                        <li>• Built wallet accounting systems, automated webhook verification, and retry handling for failed provider calls.</li>
+                        <li>• Developed an administrative control panel for reviewing transactions, user balances, and system health.</li>
+                    </ul>
                 </article>
                 <article class="timeline-card sa-stagger-item">
-                    <span class="eyebrow">Jul — Sep 2025</span>
-                    <h3>Lead Tutor (Frontend)</h3>
-                    <p class="body-copy"><strong>Kadahive Summer Classes</strong></p>
-                    <p class="body-copy">Mentored learners in HTML, CSS and JavaScript through project-based teaching and hands-on guidance.</p>
+                    <span class="eyebrow">Sept 2024 — Mar 2026</span>
+                    <h3>SEO Specialist</h3>
+                    <p class="body-copy"><strong>Guru Web Design &amp; SEO</strong> · Remote</p>
+                    <ul class="mini-list" style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-muted); padding-left: 0; list-style: none;">
+                        <li>• Executed technical SEO audits and local search optimization for 20+ international business clients.</li>
+                        <li>• Implemented Schema.org structured data, metadata standards, and performance fixes to improve organic rankings.</li>
+                        <li>• Optimized Google Business Profiles, citations, and business listings to expand organic search traffic.</li>
+                    </ul>
                 </article>
             </section>
 
             <section class="recruiter-grid sa-fade-up" style="margin-top: 32px;">
                 <article class="info-card">
-                    <span class="eyebrow">Core strengths</span>
-                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin: 10px 0 6px; letter-spacing: -0.015em;">What I bring</h3>
+                    <span class="eyebrow">Recruiter Summary</span>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin: 10px 0 6px; letter-spacing: -0.015em;">What I Bring to Engineering Teams</h3>
                     <ul class="mini-list" style="margin-top: 8px;">
-                        <li><span>Laravel systems</span><span>Backend &amp; admin workflows</span></li>
-                        <li><span>Business sites</span><span>Responsive &amp; conversion-focused</span></li>
-                        <li><span>Technical SEO</span><span>Structure, speed, discoverability</span></li>
+                        <li><span>Backend Systems</span><span>Laravel, PHP, REST APIs, MySQL, Webhooks</span></li>
+                        <li><span>E-Commerce &amp; Fintech</span><span>Cart state, payment gateways, wallet ledgers</span></li>
+                        <li><span>Performance &amp; SEO</span><span>Core Web Vitals, Schema markup, semantic HTML</span></li>
                     </ul>
                 </article>
                 <article class="contact-card">
-                    <span class="eyebrow">Open to work</span>
-                    <h3>Remote full-time roles and project contracts.</h3>
-                    <p class="body-copy">If your team needs a full stack developer who also handles SEO-aware implementation, I'm available.</p>
+                    <span class="eyebrow">Availability</span>
+                    <h3>Full-time remote engineering roles &amp; contracts.</h3>
+                    <p class="body-copy">Available for immediate hiring across full stack web development, backend engineering, and e-commerce projects.</p>
                     <div style="margin-top: 22px;">
-                        <a class="btn-main" href="contact.html">Let's talk</a>
+                        <a class="btn-main" href="contact.html">Get in Touch</a>
                     </div>
                 </article>
             </section>

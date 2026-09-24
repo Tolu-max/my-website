@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Archive — Toluwalope Oyelola</title>
-    <meta name="description" content="Extended project archive by Toluwalope Oyelola covering fintech, ecommerce, and service-business web development builds.">
+    <title>Web Development Portfolio | Toluwalope Oyelola</title>
+    <meta name="description" content="A project archive of Toluwalope Oyelola's web development work across fintech, e-commerce, education, and business websites.">
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/projects.html">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/projects.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Project Archive — Toluwalope Oyelola">
-    <meta property="og:description" content="A broader collection of web development projects built with business outcomes in mind.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/projects.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta property="og:title" content="Web Development Portfolio | Toluwalope Oyelola">
+    <meta property="og:description" content="Archived web development work by Toluwalope Oyelola across fintech, e-commerce, education, and business websites.">
+    <meta property="og:url" content="https://toluoyelola.cv/projects.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Project Archive — Toluwalope Oyelola">
     <meta name="twitter:description" content="Business-focused websites and web apps built with Laravel, PHP, JavaScript and SEO awareness.">
-    <meta name="twitter:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta name="twitter:image" content="https://toluoyelola.cv/img/tconnect.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,80 +98,103 @@
     <main class="section">
         <div class="container page-shell">
             <header class="page-header sa-fade-up">
-                <span class="eyebrow">Projects archive</span>
-                <h1 class="page-title sa-word">Everything I've built. All live.</h1>
-                <p class="page-subtitle sa-slide-up">From a Jumia-scale ecommerce clone built solo in 2 weeks to fintech, EdTech, ecommerce and service platforms.</p>
+                <span class="eyebrow">Technical Portfolio</span>
+                <h1 class="page-title sa-word">Production Applications &amp; Systems</h1>
+                <p class="page-subtitle sa-slide-up">Detailed overview of web applications, payment systems, and e-commerce platforms engineered for real users and operational reliability.</p>
             </header>
 
             <section class="bento-grid sa-stagger-row">
+                <!-- TCONNECT (Flagship fintech) -->
+                <article class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
+                    <div class="project-media"><img src="img/tconnect.png" alt="TConnect VTU fintech project preview" loading="lazy" decoding="async"></div>
+                    <div class="project-meta">
+                        <div>
+                            <div class="panel-header" style="margin-bottom: 10px;">
+                                <span class="eyebrow">Fintech &amp; Payments · Laravel</span>
+                                <span class="pill">Archived project</span>
+                            </div>
+                            <h3 class="project-title">TConnect — VTU &amp; Utility Billing Platform</h3>
+                            <p class="card-copy">I built the fintech platform with wallet funding, Monnify and Paystack integrations, verified webhooks, and an administration dashboard. It processed over 3,000 real transactions before going offline.</p>
+                        </div>
+                        <a class="pill" href="work/tconnect.html">Read the case study &nearr;</a>
+                    </div>
+                </article>
+
+                <!-- AAIPHONES (Ecommerce) -->
+                <article class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
+                    <div class="project-media"><img src="img/Aaiphones.jpg" alt="AAIPhones ecommerce project preview" loading="lazy" decoding="async"></div>
+                    <div class="project-meta">
+                        <div>
+                            <div class="panel-header" style="margin-bottom: 10px;">
+                                <span class="eyebrow">E-Commerce · Archive</span>
+                                <span class="pill">Client Work</span>
+                            </div>
+                            <h3 class="project-title">AAIPhones — Device E-Commerce Platform</h3>
+                            <p class="card-copy">Commercial storefront for mobile device retail. Implemented structured product inventory, dynamic cart state, responsive checkout workflows, and technical on-page SEO optimization. The live storefront is no longer online; this archive shows the work completed.</p>
+                        </div>
+                        <span class="pill">Storefront offline</span>
+                    </div>
+                </article>
+
+                <!-- AIMUJ (Full-scale ecommerce) -->
                 <a href="https://aimuj.tconnect.com.ng/" target="_blank" rel="noreferrer" class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
                     <div class="project-meta">
                         <div>
                             <div class="panel-header" style="margin-bottom: 10px;">
-                                <span class="eyebrow">Ecommerce · Laravel</span>
-                                <span class="pill">Solo · 2 wks</span>
+                                <span class="eyebrow">E-Commerce Architecture · Laravel</span>
+                                <span class="pill">14-Day Delivery</span>
                             </div>
-                            <h3 class="project-title">Aimuj — Jumia clone</h3>
-                            <p class="card-copy">Full-scale Jumia-style ecommerce platform — catalogue, cart, checkout and admin. Built and deployed in 14 days.</p>
+                            <h3 class="project-title">Aimuj — Multi-Department E-Commerce Store</h3>
+                            <p class="card-copy">Full-featured marketplace storefront built and delivered in 14 days — catalog filtering, cart persistence, checkout pipeline, and a dedicated admin portal for inventory management.</p>
                         </div>
-                        <span class="pill">Live ↗</span>
+                        <span class="pill">Live Demo &nearr;</span>
                     </div>
                 </a>
+
+                <!-- EDUPULSE (EdTech / Node) -->
                 <a href="https://edu-pulse-jet.vercel.app/" target="_blank" rel="noreferrer" class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
                     <div class="project-meta">
                         <div>
                             <div class="panel-header" style="margin-bottom: 10px;">
-                                <span class="eyebrow">EdTech · Co-built</span>
-                                <span class="pill">Backend lead</span>
+                                <span class="eyebrow">EdTech · Node.js &amp; MySQL</span>
+                                <span class="pill">Backend Lead</span>
                             </div>
-                            <h3 class="project-title">EduPulse</h3>
-                            <p class="card-copy">Education platform co-built with a team. I owned the backend — APIs, authentication, database architecture.</p>
+                            <h3 class="project-title">EduPulse — School Records Management</h3>
+                            <p class="card-copy">Web portal for academic administration. Architected the backend REST APIs, MySQL relational schemas, role-based authorization, and grade computation workflows.</p>
                         </div>
-                        <span class="pill">Live ↗</span>
+                        <span class="pill">Live Demo &nearr;</span>
                     </div>
                 </a>
-                <a href="https://aaiphones.com.ng" target="_blank" rel="noreferrer" class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
-                    <div class="project-media"><img src="img/Aaiphones.jpg" alt="AAIPhones ecommerce project preview" loading="lazy" decoding="async"></div>
-                    <div class="project-meta">
-                        <div>
-                            <span class="eyebrow">Ecommerce</span>
-                            <h3 class="project-title">AAIPhones</h3>
-                            <p class="card-copy">Responsive ecommerce website built for easier product discovery and improved customer flow.</p>
-                        </div>
-                        <span class="pill">Live ↗</span>
-                    </div>
-                </a>
-                <a href="https://khadee-sigma.vercel.app/" target="_blank" rel="noreferrer" class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
-                    <div class="project-media"><img src="img/Khadee.png" alt="Khadee project preview" loading="lazy" decoding="async"></div>
-                    <div class="project-meta">
-                        <div>
-                            <span class="eyebrow">Brand website</span>
-                            <h3 class="project-title">Khadee</h3>
-                            <p class="card-copy">Clean brand website focused on clarity, responsiveness and modern presentation.</p>
-                        </div>
-                        <span class="pill">Live ↗</span>
-                    </div>
-                </a>
-                <a href="https://tconnect.com.ng" target="_blank" rel="noreferrer" class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
-                    <div class="project-media"><img src="img/tconnect.png" alt="TConnect VTU fintech project preview" loading="lazy" decoding="async"></div>
-                    <div class="project-meta">
-                        <div>
-                            <span class="eyebrow">Fintech</span>
-                            <h3 class="project-title">TConnect</h3>
-                            <p class="card-copy">Laravel-powered VTU/payment platform with wallet functionality and secure transaction handling.</p>
-                        </div>
-                        <span class="pill">Flagship</span>
-                    </div>
-                </a>
+
+                <!-- DLITE (Bakery testing) -->
                 <a href="https://dlite.tconnect.com.ng" target="_blank" rel="noreferrer" class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
                     <div class="project-media"><img src="img/Dlite.png" alt="Dlite bakery website preview" loading="lazy" decoding="async"></div>
                     <div class="project-meta">
                         <div>
-                            <span class="eyebrow">Bakery platform</span>
-                            <h3 class="project-title">Dlite</h3>
-                            <p class="card-copy">Owner-testing build for validating a bakery product and ordering flow before scaling.</p>
+                            <div class="panel-header" style="margin-bottom: 10px;">
+                                <span class="eyebrow">Product Catalog · Prototype</span>
+                                <span class="pill">Test Environment</span>
+                            </div>
+                            <h3 class="project-title">Dlite — Bakery Platform</h3>
+                            <p class="card-copy">Online bakery product showcase and ordering workflow built for business validation and pre-launch customer testing.</p>
                         </div>
-                        <span class="pill">Live ↗</span>
+                        <span class="pill">Live Demo &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- KHADEE (Brand site) -->
+                <a href="https://khadee-sigma.vercel.app/" target="_blank" rel="noreferrer" class="bento-item project-card sa-stagger-item" style="grid-column: span 6;">
+                    <div class="project-media"><img src="img/Khadee.png" alt="Khadee project preview" loading="lazy" decoding="async"></div>
+                    <div class="project-meta">
+                        <div>
+                            <div class="panel-header" style="margin-bottom: 10px;">
+                                <span class="eyebrow">Responsive Web · Pro Bono</span>
+                                <span class="pill">Live</span>
+                            </div>
+                            <h3 class="project-title">Khadee — Brand Website</h3>
+                            <p class="card-copy">Responsive promotional website built with semantic HTML5, modern CSS3 styling, and mobile viewport optimization.</p>
+                        </div>
+                        <span class="pill">Live Site &nearr;</span>
                     </div>
                 </a>
             </section>

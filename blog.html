@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — SEO &amp; Web Dev Guides by Toluwalope Oyelola</title>
-    <meta name="description" content="50+ practical SEO and web development guides for business owners, recruiters and teams — by Toluwalope Oyelola.">
-    <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/blog.html">
+    <title>Writing in progress | Toluwalope Oyelola</title>
+    <meta name="description" content="Technical notes and practical lessons from Toluwalope Oyelola.">
+    <meta name="robots" content="noindex,follow">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/blog.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Blog — SEO &amp; Web Dev Guides">
-    <meta property="og:description" content="50+ practical guides on websites, SEO, Laravel, API integrations and hiring remote web development support.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/blog.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta property="og:title" content="Writing in progress | Toluwalope Oyelola">
+    <meta property="og:description" content="Technical notes and practical lessons from Toluwalope Oyelola.">
+    <meta property="og:url" content="https://toluoyelola.cv/blog.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog — SEO &amp; Web Dev Guides">
-    <meta name="twitter:description" content="50+ practical guides on websites, SEO, Laravel, API integrations and hiring remote web development support.">
-    <meta name="twitter:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta name="twitter:title" content="Writing in progress | Toluwalope Oyelola">
+    <meta name="twitter:description" content="Technical notes and practical lessons from Toluwalope Oyelola.">
+    <meta name="twitter:image" content="https://toluoyelola.cv/img/tconnect.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,15 +43,6 @@
         .preloader { opacity: 1 !important; }
     </style>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Toluwalope Oyelola Blog",
-      "url": "https://tolu.tconnect.com.ng/blog.html",
-      "description": "Web development and SEO insights for business growth."
-    }
-    </script>
 </head>
 <body>
     <div class="preloader" id="preloader" aria-hidden="true">
@@ -91,90 +96,20 @@
         </nav>
     </div>
 
-    <main class="section">
-        <div class="container page-shell">
-            <header class="page-header sa-fade-up">
-                <span class="eyebrow">The knowledge base</span>
-                <h1 class="page-title sa-word">Practical guides for modern web work.</h1>
-                <p class="page-subtitle sa-slide-up">
-                    50+ guides covering Laravel architecture, technical SEO, business website strategy and remote developer hiring.
-                </p>
-            </header>
-
-            <div class="blog-grid sa-stagger-row">
-                <article class="info-card sa-stagger-item">
-                    <span class="pill">Strategy</span>
-                    <h3><a class="text-link" href="blog/landing-page-vs-full-website.html">Landing page vs full website</a></h3>
-                    <p class="body-copy">Choosing the right architecture for conversion vs long-term organic growth.</p>
-                </article>
-                <article class="info-card sa-stagger-item">
-                    <span class="pill">Business</span>
-                    <h3><a class="text-link" href="blog/how-long-to-build-a-business-website.html">How long to build a business website</a></h3>
-                    <p class="body-copy">Timelines from discovery to deployment for professional service sites.</p>
-                </article>
-                <article class="info-card sa-stagger-item">
-                    <span class="pill">Pricing</span>
-                    <h3><a class="text-link" href="blog/how-to-price-web-development-services.html">How to price web development services</a></h3>
-                    <p class="body-copy">A guide for freelancers and agencies on value-based pricing.</p>
-                </article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/local-seo-basics-for-business-websites.html">Local SEO basics</a></h3><p class="body-copy">Essential foundations for ranking local service businesses.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/on-page-seo-checklist-for-static-websites.html">On-page SEO checklist</a></h3><p class="body-copy">A 20-point checklist for static site optimization.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/how-to-write-better-seo-title-tags.html">Better SEO title tags</a></h3><p class="body-copy">How to write titles that rank and drive clicks.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/meta-description-writing-guide.html">Meta descriptions</a></h3><p class="body-copy">Crafting snippets that improve click-through rates.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/technical-seo-for-small-business-sites.html">Technical SEO for SMBs</a></h3><p class="body-copy">Foundational technical SEO for small business sites.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/internal-linking-strategy-for-service-websites.html">Internal linking strategy</a></h3><p class="body-copy">Building site authority through smart internal linking.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/image-seo-guide-for-business-websites.html">Image SEO</a></h3><p class="body-copy">Optimizing visuals for speed and image-search visibility.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/schema-markup-for-portfolio-websites.html">Schema markup</a></h3><p class="body-copy">Structured data for better rich results.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Strategy</span><h3><a class="text-link" href="blog/seo-blog-strategy-for-service-businesses.html">SEO blog strategy</a></h3><p class="body-copy">Using content to drive consistent leads.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/keyword-research-for-web-developers.html">Keyword research</a></h3><p class="body-copy">A developer's guide to high-value search terms.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Tech</span><h3><a class="text-link" href="blog/laravel-vs-wordpress-for-business-websites.html">Laravel vs WordPress</a></h3><p class="body-copy">Choosing the right tool for your business.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Tech</span><h3><a class="text-link" href="blog/php-and-laravel-stack-explained.html">PHP &amp; Laravel explained</a></h3><p class="body-copy">A deep dive into the modern PHP ecosystem.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Tech</span><h3><a class="text-link" href="blog/mysql-best-practices-for-web-applications.html">MySQL best practices</a></h3><p class="body-copy">Optimizing your data layer for performance and scale.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Tech</span><h3><a class="text-link" href="blog/api-integration-guide-for-business-platforms.html">API integration guide</a></h3><p class="body-copy">Connecting your business apps seamlessly.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Tech</span><h3><a class="text-link" href="blog/secure-contact-form-setup-for-static-sites.html">Secure contact forms</a></h3><p class="body-copy">Safe, reliable forms on static sites.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Ops</span><h3><a class="text-link" href="blog/monthly-website-maintenance-checklist.html">Maintenance checklist</a></h3><p class="body-copy">Keeping your site healthy and secure.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Perf</span><h3><a class="text-link" href="blog/website-performance-audit-guide.html">Performance audit guide</a></h3><p class="body-copy">Finding and fixing speed bottlenecks.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">UX</span><h3><a class="text-link" href="blog/accessibility-basics-for-business-websites.html">Accessibility basics</a></h3><p class="body-copy">Building inclusive experiences for all users.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">UX</span><h3><a class="text-link" href="blog/mobile-navigation-best-practices.html">Mobile navigation</a></h3><p class="body-copy">Designing intuitive navigation for small screens.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Product</span><h3><a class="text-link" href="blog/how-to-plan-a-scalable-web-app-mvp.html">Scaling your MVP</a></h3><p class="body-copy">Architectural decisions for early-stage web apps.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Hiring</span><h3><a class="text-link" href="blog/how-to-hire-a-web-developer-without-wasting-budget.html">Hiring web developers</a></h3><p class="body-copy">Practical advice for finding the right talent.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Remote</span><h3><a class="text-link" href="blog/how-to-work-effectively-with-a-remote-web-developer.html">Remote collaboration</a></h3><p class="body-copy">Building strong partnerships across time zones.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Hiring</span><h3><a class="text-link" href="blog/web-developer-interview-questions-for-business-owners.html">Interview questions</a></h3><p class="body-copy">What to ask when vetting a developer.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Career</span><h3><a class="text-link" href="blog/what-recruiters-look-for-in-a-portfolio-website.html">Recruiter insights</a></h3><p class="body-copy">Making your portfolio stand out to hiring managers.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Career</span><h3><a class="text-link" href="blog/how-to-stand-out-as-a-laravel-developer.html">Stand out as a Laravel dev</a></h3><p class="body-copy">Differentiating yourself in a competitive market.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Freelance</span><h3><a class="text-link" href="blog/client-onboarding-for-freelance-web-developers.html">Client onboarding</a></h3><p class="body-copy">Setting up successful freelance projects.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Freelance</span><h3><a class="text-link" href="blog/how-to-write-better-proposals-for-web-projects.html">Better proposals</a></h3><p class="body-copy">Winning more work with clear, value-driven proposals.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Remote</span><h3><a class="text-link" href="blog/remote-team-communication-for-web-projects.html">Remote team comms</a></h3><p class="body-copy">Tools and workflows for distributed teams.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Career</span><h3><a class="text-link" href="blog/build-a-job-ready-developer-portfolio.html">Job-ready portfolio</a></h3><p class="body-copy">Building a portfolio that gets you hired.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Career</span><h3><a class="text-link" href="blog/how-to-get-remote-web-development-jobs-faster.html">Get remote jobs faster</a></h3><p class="body-copy">Strategies for accelerating your remote career.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Pricing</span><h3><a class="text-link" href="blog/starter-business-website-from-naira30000.html">Starter web package</a></h3><p class="body-copy">Professional business websites starting at ₦250,000.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">UX</span><h3><a class="text-link" href="blog/responsive-website-checklist-for-business-owners.html">Responsive checklist</a></h3><p class="body-copy">Ensuring your site works on every device.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">SEO</span><h3><a class="text-link" href="blog/seo-friendly-website-structure-that-works.html">SEO-friendly structure</a></h3><p class="body-copy">Building site foundation for organic traffic.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Perf</span><h3><a class="text-link" href="blog/website-speed-optimization-for-small-businesses.html">Speed optimization</a></h3><p class="body-copy">Making your business website lightning fast.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Career</span><h3><a class="text-link" href="blog/portfolio-website-tips-for-freelancers.html">Portfolio tips</a></h3><p class="body-copy">Optimization strategies for your showcase site.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Business</span><h3><a class="text-link" href="blog/small-business-website-features-checklist.html">SMB feature checklist</a></h3><p class="body-copy">Must-have features for any business website.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Hiring</span><h3><a class="text-link" href="blog/how-to-evaluate-a-remote-full-stack-developer.html">Evaluating developers</a></h3><p class="body-copy">Vetting technical skills for your next project.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Career</span><h3><a class="text-link" href="blog/how-to-present-projects-to-recruiters.html">Project presentation</a></h3><p class="body-copy">Showcasing your work to hiring managers.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Strategy</span><h3><a class="text-link" href="blog/business-website-feature-prioritization-guide.html">Feature prioritization</a></h3><p class="body-copy">Deciding what to build first for maximum ROI.</p></article>
-                <article class="info-card sa-stagger-item"><span class="pill">Ops</span><h3><a class="text-link" href="blog/website-launch-checklist-for-service-businesses.html">Launch checklist</a></h3><p class="body-copy">Everything you need before going live.</p></article>
-            </div>
-
-            <section class="recruiter-grid sa-fade-up" style="margin-top: 64px;">
-                <article class="bento-item">
-                    <span class="eyebrow">Ready to build?</span>
-                    <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 10px 0; letter-spacing: -0.015em;">Business websites from ₦250,000</h3>
-                    <p class="body-copy">Responsive design, SEO setup and speed optimization included. Larger Laravel builds quoted on scope (typically from ₦750k for CMS sites, ₦2M+ for full web apps).</p>
-                    <a class="btn-main" href="contact.html" style="margin-top: 20px; width: fit-content;">Start your project</a>
-                </article>
-                <article class="bento-item contact-card">
-                    <span class="eyebrow">Need a partner?</span>
-                    <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 10px 0; letter-spacing: -0.015em;">Remote engineering</h3>
-                    <p class="body-copy">Available for full-time roles and contract dashboard or Laravel builds.</p>
-                    <a class="btn-secondary" href="contact.html" style="margin-top: 20px; width: fit-content;">Get in touch</a>
-                </article>
-            </section>
-        </div>
-    </main>
+<main class="section">
+    <div class="container page-shell">
+        <header class="page-header sa-fade-up">
+            <span class="eyebrow">Field notes</span>
+            <h1 class="page-title">Blog articles are being rewritten.</h1>
+            <p class="page-subtitle">The articles are being reviewed and a smaller collection with original examples and practical lessons will return later.</p>
+        </header>
+        <section class="info-card" aria-labelledby="notes-status-title">
+            <h2 id="notes-status-title">Notes are temporarily offline</h2>
+            <p class="body-copy">Until then, explore projects and case studies.</p>
+            <a class="text-link" href="work.html">Explore selected work <span aria-hidden="true">→</span></a>
+        </section>
+    </div>
+</main>
 
     <footer class="fat-footer">
         <div class="container">

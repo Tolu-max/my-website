@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimuj Multi-Category Retail Platform — Case Study by Toluwalope Oyelola</title>
+    <meta name="description" content="Technical case study of Aimuj: A multi-category ecommerce platform designed and delivered solo in a 14-day rapid prototyping sprint with Laravel and MySQL.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/work/aimuj.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Aimuj Platform Technical Case Study — Toluwalope Oyelola">
+    <meta property="og:description" content="Rapid product development: 14-day solo build covering catalogue, cart sessions, checkout flows, and administration.">
+    <meta property="og:url" content="https://toluoyelola.cv/work/aimuj.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/aimuj.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- PAGE PRELOADER -->
+    <div id="page-preloader">
+        <div class="preloader-symbol">T</div>
+        <div class="preloader-counter" id="preloader-counter">0%</div>
+        <div class="preloader-bar-wrap">
+            <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- TOP SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
+
+
+
+    <!-- CUSTOM INTERACTIVE CURSOR -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-follower" id="cursor-follower"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="brand" aria-label="Toluwalope Oyelola Homepage">
+
+                <div class="brand-text">
+                    <strong>Toluwalope Oyelola</strong>
+                    <span>Full Stack Developer</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary Navigation">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../work.html" class="nav-link active">Work</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="../contact.html" class="btn-primary">Get in touch</a>
+                <button type="button" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-drawer" id="mobile-drawer">
+        <a href="../index.html">Home</a>
+        <a href="../work.html">Work &amp; Case Studies</a>
+        <a href="../about.html">About &amp; Background</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+
+    <main>
+        <article>
+            <header class="case-study-header">
+                <div class="container">
+                    <a href="../work.html" class="arrow-link" style="margin-bottom: 20px; display: inline-block;">&larr; Back to Work</a>
+                    <br>
+                    <span class="eyebrow eyebrow-active">Rapid Prototyping &bull; Ecommerce</span>
+                    <h1 class="case-study-title">Aimuj Multi-Category Retail Platform</h1>
+                    <p class="case-study-lead">
+                        An end-to-end retail marketplace prototype modeled after African ecommerce workflows, built solo from initial schema conception to deployment in a focused 14-day development sprint.
+                    </p>
+
+                    <div class="case-meta-grid">
+                        <div class="case-meta-item">
+                            <span>Sprint Scope</span>
+                            <strong>14-Day Solo Build</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Stack</span>
+                            <strong>Laravel, MySQL, Blade, JavaScript</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Architecture</span>
+                            <strong>MVC, Normalized Schema, Session Carts</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Live URL</span>
+                            <strong><a href="https://aimuj.tconnect.com.ng/" target="_blank" rel="noopener" class="text-link">aimuj.tconnect.com.ng &nearr;</a></strong>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container case-body">
+                <div class="case-hero-media" style="border: 1px solid var(--line-strong); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 48px;">
+                    <img src="../img/aimuj.png" alt="Aimuj ecommerce store catalogue interface" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                </div>
+
+                <section class="case-section">
+                    <h2>01 / Motivation &amp; Exploration</h2>
+                    <p>
+                        The goal was to test execution speed and comprehensive product modeling by creating a full-scale retail marketplace prototype in two weeks. Rather than using pre-packaged plugins, the platform was developed from the ground up to establish deep control over order processing states, inventory variations, and relational querying.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h2>02 / Core Product Architecture</h2>
+                    <div class="feature-list">
+                        <div class="feature-list-item">
+                            <span>Hierarchical Catalogue</span>
+                            <span>Nested product categories, dynamic filters by brand and price, search indexing, and product slug generators.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Cart &amp; Session Engine</span>
+                            <span>Resilient cart system functioning seamlessly for both guest visitors and authenticated users with item stock reservation.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Checkout Workflow</span>
+                            <span>Multi-step delivery address capture, payment method selection, and order summary generation with tax and delivery fee rules.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Admin Management</span>
+                            <span>Complete product creation interface, stock adjustment panel, customer management, and order status update pipeline.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>03 / Engineering Takeaways</h2>
+                    <p>
+                        Completing this platform solo in 14 days demonstrated rapid application scaffolding, disciplined MVC design in Laravel, and the value of clear relational database schemas prior to writing UI code.
+                    </p>
+                </section>
+
+                <div style="padding: 32px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 48px;">
+                    <a href="edupulse.html" class="arrow-link">Next Case Study: EduPulse EdTech &rarr;</a>
+                    <a href="https://aimuj.tconnect.com.ng/" target="_blank" rel="noopener" class="btn-primary">Explore Live Store Demo &nearr;</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Toluwalope Samuel Oyelola</h3>
+                    <p>Full-stack &amp; product engineer building resilient backend systems, database schemas, and digital interfaces.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../work.html">Work</a></li>
+                            <li><a href="../about.html">About</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Case Studies</h4>
+                        <ul>
+                            <li><a href="tconnect.html">TConnect VTU</a></li>
+                            <li><a href="aimuj.html">Aimuj Platform</a></li>
+                            <li><a href="edupulse.html">EduPulse EdTech</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Channels</h4>
+                        <ul>
+                            <li><a href="https://github.com/Tolu-max" target="_blank" rel="noopener">GitHub &nearr;</a></li>
+                            <li><a href="https://www.linkedin.com/in/tolu-oyelola-797154391" target="_blank" rel="noopener">LinkedIn &nearr;</a></li>
+                            <li><a href="mailto:toluoyelola066@gmail.com">Email Direct</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Toluwalope Samuel Oyelola. Built with intentional simplicity.</span>
+                <span>Available for Remote Roles Worldwide</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

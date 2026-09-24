@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- AI SEO: Title matches the highest-intent query for this page -->
-    <title>Toluwalope Samuel Oyelola — CV & Skills | Full Stack Developer, SEO Specialist</title>
+    <title>Resume | Toluwalope Oyelola — Full-Stack Developer</title>
 
     <!-- AI SEO: Meta description is a clear, standalone 40–60-word answer block -->
-    <meta name="description" content="Toluwalope Samuel Oyelola is a remote Full Stack Web Developer, Social Media Manager, and SEO Specialist based in Nigeria. He builds Laravel, PHP, and JavaScript web applications and is available for full-time and contract remote roles globally.">
+    <meta name="description" content="View the resume of Toluwalope Oyelola, a full-stack developer experienced with Laravel, PHP, JavaScript, MySQL, fintech, and e-commerce platforms.">
 
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="keywords" content="Toluwalope Oyelola CV, Full Stack Laravel Developer Nigeria, Social Media Manager Nigeria, Technical SEO Specialist, Web Developer Resume">
+    <meta name="keywords" content="Toluwalope Oyelola CV, Full Stack Developer, Laravel Developer, PHP Developer, Web Developer Resume, E-Commerce Developer">
 
     <!-- Freshness signal — AI SEO best practice -->
     <meta name="last-modified" content="2026-04-17">
 
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/cv.html">
+    <link rel="canonical" href="https://toluoyelola.cv/cv.html">
     <meta property="og:type" content="profile">
-    <meta property="og:title" content="Toluwalope Samuel Oyelola — CV | Full Stack Developer & Digital Creative">
-    <meta property="og:description" content="Remote Full Stack Web Developer, Social Media Manager, and SEO Specialist. Available for full-time and contract remote roles.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/cv.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta property="og:title" content="Toluwalope Samuel Oyelola — CV | Full Stack Developer">
+    <meta property="og:description" content="Full Stack Web Developer specializing in Laravel, PHP, JavaScript, and MySQL. Available for remote full-time roles and engineering contracts.">
+    <meta property="og:url" content="https://toluoyelola.cv/cv.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Toluwalope Samuel Oyelola — CV | Full Stack Developer & Digital Creative">
-    <meta name="twitter:description" content="Remote Full Stack Web Developer, Social Media Manager, and SEO Specialist based in Nigeria.">
-    <meta name="twitter:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta name="twitter:title" content="Toluwalope Samuel Oyelola — CV | Full Stack Developer">
+    <meta name="twitter:description" content="Full Stack Web Developer specializing in Laravel, PHP, JavaScript, and MySQL. Available for remote full-time roles and engineering contracts.">
+    <meta name="twitter:image" content="https://toluoyelola.cv/img/tconnect.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,30 +58,24 @@
         {
           "@type": "Person",
           "name": "Toluwalope Samuel Oyelola",
-          "url": "https://tolu.tconnect.com.ng/cv.html",
-          "image": "https://tolu.tconnect.com.ng/img/tconnect.png",
+          "url": "https://toluoyelola.cv/cv.html",
+          "image": "https://toluoyelola.cv/img/tconnect.png",
           "jobTitle": [
-            "Full Stack Web Developer",
+            "Full Stack Developer",
             "Laravel Developer",
-            "Social Media Manager",
-            "SEO Specialist"
+            "Web Developer"
           ],
-          "description": "Toluwalope Samuel Oyelola is a remote Full Stack Web Developer, Social Media Manager, and SEO Specialist who has been building production-grade web applications since 2021. He specialises in Laravel, PHP, JavaScript, and MySQL.",
+          "description": "Toluwalope Samuel Oyelola is a Full Stack Developer specializing in Laravel, PHP, JavaScript, and MySQL. He builds production-grade web applications, e-commerce platforms, and API systems.",
           "email": "mailto:toluoyelola066@gmail.com",
           "telephone": "+2348083723613",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "NG"
-          },
           "workLocation": {
             "@type": "VirtualLocation",
-            "name": "Remote"
+            "name": "Remote Worldwide"
           },
           "knowsAbout": [
-            "Laravel", "PHP", "JavaScript", "HTML", "CSS", "MySQL",
-            "Technical SEO", "On-page SEO", "AI SEO",
-            "Social Media Management", "Content Strategy", "Web Performance Optimisation",
-            "REST API Development", "Admin Dashboard Development"
+            "Laravel", "PHP", "JavaScript", "HTML5", "CSS3", "MySQL",
+            "Technical SEO", "REST API Development", "Database Architecture",
+            "Payment Gateway Integration", "Paystack", "Monnify", "Webhooks"
           ],
           "sameAs": [
             "https://github.com/Tolu-max",
@@ -75,23 +83,18 @@
           ],
           "alumniOf": {
             "@type": "EducationalOrganization",
-            "name": "Self-taught, started 2021"
+            "name": "Ahmadu Bello University"
           },
           "hasOccupation": [
             {
               "@type": "Occupation",
-              "name": "Full Stack Web Developer",
-              "skills": "Laravel, PHP, JavaScript, MySQL, HTML, CSS, REST APIs"
-            },
-            {
-              "@type": "Occupation",
-              "name": "Social Media Manager",
-              "skills": "Content strategy, scheduling, analytics, platform management"
+              "name": "Full Stack Developer",
+              "skills": "Laravel, PHP, JavaScript, MySQL, HTML5, CSS3, REST APIs, Payment Gateways"
             },
             {
               "@type": "Occupation",
               "name": "SEO Specialist",
-              "skills": "Technical SEO, on-page optimisation, AI SEO, schema markup, performance auditing"
+              "skills": "Technical SEO, on-page optimization, schema markup, performance auditing"
             }
           ]
         },
@@ -103,7 +106,7 @@
               "name": "What does Toluwalope Oyelola do?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Toluwalope Samuel Oyelola is a remote Full Stack Web Developer, Social Media Manager, and SEO Specialist based in Nigeria. He builds production-grade web applications with Laravel, PHP, JavaScript, and MySQL, manages brand social accounts, and is available globally for full-time and contract remote roles."
+                "text": "Toluwalope Samuel Oyelola is a Full Stack Developer working remotely worldwide. He builds scalable production web applications, e-commerce storefronts, and fintech payment systems with Laravel, PHP, JavaScript, and MySQL."
               }
             },
             {
@@ -111,7 +114,7 @@
               "name": "What skills does Toluwalope Oyelola have?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "His core skills include Laravel, PHP, JavaScript, HTML, CSS, MySQL, Technical SEO, AI SEO, Social Media Management, REST API development, and admin dashboard development. He has been building production websites and web apps since 2021."
+                "text": "His core technical competencies include PHP, Laravel, JavaScript (ES6+), MySQL, HTML5, CSS3, RESTful APIs, payment integrations (Paystack, Monnify), webhooks, and Technical SEO."
               }
             },
             {
@@ -119,15 +122,15 @@
               "name": "Is Toluwalope Oyelola available for remote work?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Toluwalope Oyelola works remote only and is open to full-time remote roles and contract web development opportunities globally. He can be contacted at toluoyelola066@gmail.com."
+                "text": "Yes. Toluwalope Oyelola is available for full-time remote developer positions and contract web engineering projects globally. He can be reached at toluoyelola066@gmail.com."
               }
             },
             {
               "@type": "Question",
-              "name": "What projects has Toluwalope Oyelola built?",
+              "name": "What production projects has Toluwalope Oyelola built?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "He built TConnect — a fintech VTU platform with secure transaction flow, wallet management, and an admin dashboard, built with Laravel, PHP, and MySQL. He has also delivered e-commerce storefronts and service-business websites for AAIPhones, Dlite, and other clients."
+                "text": "He built TConnect — a production fintech VTU platform that has processed over 3,000 real transactions with wallet functionality and automated payment verification. He has also engineered e-commerce platforms including AAIPhones and Aimuj, as well as the EduPulse school management portal."
               }
             }
           ]
@@ -140,9 +143,6 @@
 </head>
 <body>
 
-    <div class="orb-1" aria-hidden="true"></div>
-    <div class="orb-2" aria-hidden="true"></div>
-
     <!-- ─── HEADER ──────────────────────────────────────────── -->
     <header class="topbar" id="topbar">
         <div class="container">
@@ -151,7 +151,7 @@
                     <span class="brand-mark">T</span>
                     <span class="brand-copy">
                         <strong>Toluwalope S. Oyelola</strong>
-                        <span>Full Stack Web Developer</span>
+                        <span>Full Stack Developer</span>
                     </span>
                 </a>
                 <nav class="nav-island" aria-label="Primary navigation">
@@ -197,25 +197,24 @@
 
                     <!-- Left: Identity -->
                     <div class="cv-identity sa-fade-up">
-                        <span class="eyebrow" style="margin-bottom: 14px;">Curriculum Vitae — Updated April 2026</span>
+                        <span class="eyebrow" style="margin-bottom: 14px;">Curriculum Vitae</span>
                         <h1 class="cv-name">Toluwalope<br><span class="cv-name-accent">Samuel Oyelola</span></h1>
 
-                        <!-- AI SEO: standalone extractable answer for "what does he do?" -->
                         <p class="cv-tagline">
-                            Full Stack Web Developer · Social Media Manager · SEO Specialist
+                            Full Stack Web Developer (Laravel, E-Commerce &amp; APIs)
                         </p>
                         <p class="cv-summary">
-                            I've been building production-grade websites and web applications since 2021, primarily with Laravel and PHP. Alongside web development, I manage social media for brands and do technical and AI-focused SEO work. I'm remote only and open to full-time and contract roles globally.
+                            Full Stack Developer with hands-on experience building and maintaining production web applications, e-commerce platforms, and fintech systems. Proficient in Laravel, PHP, modern JavaScript, and MySQL. Experienced in RESTful API development, payment gateway integrations (Paystack, Monnify), and technical SEO performance optimization.
                         </p>
 
                         <div class="cv-badges">
                             <span class="cv-status-dot"></span>
-                            <span class="cv-status-text">Open to remote opportunities</span>
+                            <span class="cv-status-text">Available for remote full-time roles &amp; contracts</span>
                         </div>
 
                         <div class="cv-hero-actions">
-                            <a class="btn-main" href="contact.html" id="cv-contact-cta">Contact me</a>
-                            <a class="btn-secondary" href="index.html">Back to portfolio</a>
+                            <a class="btn-main" href="contact.html" id="cv-contact-cta">Contact Me</a>
+                            <a class="btn-secondary" href="Toluwalope Oyelola CV.pdf" target="_blank" rel="noopener">Download CV (PDF) &nearr;</a>
                         </div>
                     </div>
 
@@ -229,15 +228,15 @@
                                 </li>
                                 <li>
                                     <span class="cv-fact-label">Phone</span>
-                                    <a href="tel:+2348083723613" class="cv-fact-val cv-link">+234 808 372 3613</a>
+                                    <a href="tel:+2348083723613" class="cv-fact-val cv-link">08083723613</a>
                                 </li>
                                 <li>
                                     <span class="cv-fact-label">Location</span>
-                                    <span class="cv-fact-val">Nigeria (Remote worldwide)</span>
+                                    <span class="cv-fact-val">Remote worldwide</span>
                                 </li>
                                 <li>
-                                    <span class="cv-fact-label">Availability</span>
-                                    <span class="cv-fact-val">Full-time &amp; contract</span>
+                                    <span class="cv-fact-label">Education</span>
+                                    <span class="cv-fact-val">B.Sc. Computer Science (In Progress)</span>
                                 </li>
                                 <li>
                                     <span class="cv-fact-label">GitHub</span>
@@ -269,22 +268,22 @@
                 <div class="cv-skills-grid">
 
                     <!-- Web Development -->
+                    <!-- Web Development -->
                     <article class="cv-skill-card sa-slide-up" data-delay="0">
                         <div class="cv-skill-icon cv-icon-web" aria-hidden="true">&#60;/&#62;</div>
                         <div>
                             <h3>Full Stack Web Development</h3>
-                            <p>Building production-grade websites and web applications from the ground up — backend logic, database design, APIs, and frontend UI. My primary stack is Laravel with PHP, JavaScript, HTML, CSS, and MySQL.</p>
+                            <p>Engineering robust web applications, e-commerce systems, and backend platforms from database modeling to responsive UI. Proficient in Laravel, PHP, JavaScript (ES6+), MySQL, and modern CSS architectures.</p>
                             <div class="pill-group" style="margin-top: 14px;">
                                 <span class="pill">Laravel</span>
                                 <span class="pill">PHP</span>
-                                <span class="pill">React</span>
-                                <span class="pill">WordPress</span>
-                                <span class="pill">Shopify</span>
-                                <span class="pill">JavaScript</span>
+                                <span class="pill">JavaScript (ES6+)</span>
                                 <span class="pill">MySQL</span>
-                                <span class="pill">HTML / CSS</span>
-                                <span class="pill">REST APIs</span>
-                                <span class="pill">Admin Dashboards</span>
+                                <span class="pill">HTML5 &amp; CSS3</span>
+                                <span class="pill">Bootstrap</span>
+                                <span class="pill">jQuery</span>
+                                <span class="pill">RESTful APIs</span>
+                                <span class="pill">Admin Portals</span>
                             </div>
                         </div>
                     </article>
@@ -293,32 +292,32 @@
                     <article class="cv-skill-card sa-slide-up" data-delay="80">
                         <div class="cv-skill-icon cv-icon-seo" aria-hidden="true">&#9650;</div>
                         <div>
-                            <h3>SEO Specialist</h3>
-                            <p>Technical SEO audits, on-page optimisation, schema markup implementation, Core Web Vitals improvements, and AI-era SEO (AEO/GEO) — structuring content so it gets cited by Google AI Overviews, ChatGPT, Perplexity, and similar systems.</p>
+                            <h3>Technical &amp; On-Page SEO</h3>
+                            <p>Technical SEO audits, Schema.org structured data, performance optimization, and local search rankings. Proven execution delivering rank and visibility improvements for 20+ international businesses.</p>
                             <div class="pill-group" style="margin-top: 14px;">
                                 <span class="pill">Technical SEO</span>
-                                <span class="pill">On-page SEO</span>
-                                <span class="pill">AI SEO / AEO</span>
+                                <span class="pill">On-Page SEO</span>
                                 <span class="pill">Schema Markup</span>
                                 <span class="pill">Core Web Vitals</span>
-                                <span class="pill">Keyword Research</span>
+                                <span class="pill">Google Search Console</span>
+                                <span class="pill">Local SEO</span>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Social Media -->
+                    <!-- APIs & Integrations -->
                     <article class="cv-skill-card sa-slide-up" data-delay="160">
                         <div class="cv-skill-icon cv-icon-social" aria-hidden="true">&#8734;</div>
                         <div>
-                            <h3>Social Media Management</h3>
-                            <p>Strategy, content creation, scheduling, and analytics for brand accounts across Instagram, X (Twitter), LinkedIn, and Facebook. I combine organic content with data analysis to grow engagement and reach for small to mid-size brands.</p>
+                            <h3>APIs &amp; Payment Gateway Integrations</h3>
+                            <p>Integration of third-party financial and service APIs, webhook event listeners, digital wallet accounting, and automated transaction verification protocols.</p>
                             <div class="pill-group" style="margin-top: 14px;">
-                                <span class="pill">Content Strategy</span>
-                                <span class="pill">Scheduling</span>
-                                <span class="pill">Analytics</span>
-                                <span class="pill">Instagram</span>
-                                <span class="pill">LinkedIn</span>
-                                <span class="pill">X / Twitter</span>
+                                <span class="pill">Paystack API</span>
+                                <span class="pill">Monnify API</span>
+                                <span class="pill">Webhook Handlers</span>
+                                <span class="pill">Git &amp; GitHub</span>
+                                <span class="pill">Postman</span>
+                                <span class="pill">Linux / VPS</span>
                             </div>
                         </div>
                     </article>
@@ -334,8 +333,8 @@
         <section class="section" id="experience" aria-labelledby="experience-heading">
             <div class="container">
                 <div class="section-heading">
-                    <span class="eyebrow sa-fade-up">Work &amp; projects</span>
-                    <h2 id="experience-heading" class="sa-fade-up" data-delay="70">Things I've actually shipped.</h2>
+                    <span class="eyebrow sa-fade-up">Professional History</span>
+                    <h2 id="experience-heading" class="sa-fade-up" data-delay="70">Work Experience &amp; Delivered Systems</h2>
                 </div>
 
                 <div class="cv-timeline">
@@ -345,16 +344,15 @@
                         <div class="cv-timeline-dot" aria-hidden="true"></div>
                         <div class="cv-timeline-body">
                             <div class="cv-timeline-meta">
-                                <span class="cv-timeline-year">2024 – Present</span>
-                                <span class="cv-timeline-type">Freelance / Self-employed</span>
+                                <span class="cv-timeline-year">Aug 2023 – Present</span>
+                                <span class="cv-timeline-type">AAIPhones · Full Stack Developer &amp; Marketing Assistant</span>
                             </div>
-                            <h3>Freelance Full Stack Web Developer &amp; Digital Specialist</h3>
-                            <p>Building and delivering client websites and web applications remotely — Laravel backends, responsive frontends, and integrated payment and API systems. Simultaneously providing SEO and social media management services to small businesses and founders.</p>
+                            <h3>AAIPhones E-Commerce Platform</h3>
+                            <p>Engineered and actively maintain the company's e-commerce platform for mobile devices using Laravel and MySQL.</p>
                             <ul class="cv-bullet-list">
-                                <li>Built TConnect — a full fintech VTU platform with wallet management, transaction flow, and admin control panel</li>
-                                <li>Delivered e-commerce storefronts with Laravel for AAIPhones and Dlite</li>
-                                <li>Implemented technical SEO structure and schema markup across client sites</li>
-                                <li>Managed social media accounts for brand clients</li>
+                                <li>Built and maintained structured product catalogue, dynamic cart logic, and mobile-first checkout flows</li>
+                                <li>Optimized website architecture, Core Web Vitals, and technical SEO structure to enhance search ranking and user conversion</li>
+                                <li>Collaborated on digital marketing improvements and analytics tracking that expanded business lead generation</li>
                             </ul>
                         </div>
                     </div>
@@ -364,15 +362,33 @@
                         <div class="cv-timeline-dot" aria-hidden="true"></div>
                         <div class="cv-timeline-body">
                             <div class="cv-timeline-meta">
-                                <span class="cv-timeline-year">2021 – 2024</span>
-                                <span class="cv-timeline-type">Self-directed learning &amp; early projects</span>
+                                <span class="cv-timeline-year">2024 – Present</span>
+                                <span class="cv-timeline-type">TConnect · Founder &amp; Developer</span>
                             </div>
-                            <h3>Learning, building, and shipping early work</h3>
-                            <p>Spent 2021–2023 building core competency in Laravel, PHP, JavaScript, and MySQL through self-directed learning and personal projects. Began taking on small client work in 2023, growing into a full freelance practice by 2024.</p>
+                            <h3>TConnect — Fintech VTU Platform</h3>
+                            <p>Conceived, architected, and deployed a production fintech VTU application managing utility bill payments, airtime, and data subscriptions.</p>
                             <ul class="cv-bullet-list">
-                                <li>Progressed from HTML/CSS fundamentals to production-ready Laravel applications</li>
-                                <li>Built and iterated on personal projects to validate real-world skills</li>
-                                <li>Developed SEO knowledge alongside web development — naturally integrated into every build</li>
+                                <li>Engineered automated wallet funding architecture integrated with Paystack and Monnify APIs</li>
+                                <li>Built webhook transaction listeners with automated retry protocols for high-reliability order fulfillment</li>
+                                <li>Developed administrative control portal for transaction ledger auditing and operational analytics (3,000+ live transactions handled)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cv-timeline-item sa-slide-up" data-delay="160">
+                        <div class="cv-timeline-line" aria-hidden="true"></div>
+                        <div class="cv-timeline-dot" aria-hidden="true"></div>
+                        <div class="cv-timeline-body">
+                            <div class="cv-timeline-meta">
+                                <span class="cv-timeline-year">Sept 2024 – Mar 2026</span>
+                                <span class="cv-timeline-type">Guru Web Design &amp; SEO · SEO Specialist</span>
+                            </div>
+                            <h3>International Technical &amp; Local SEO Delivery</h3>
+                            <p>Managed search engine optimization and technical web enhancements across 20+ international client accounts.</p>
+                            <ul class="cv-bullet-list">
+                                <li>Executed structured technical SEO audits, fixing indexing hurdles, metadata flaws, and structured data schemas</li>
+                                <li>Optimized Google Business Profiles, citations, and digital directories for local market search performance</li>
+                                <li>Standardized SEO workflows to deliver measurable growth in organic traffic across diverse client industries</li>
                             </ul>
                         </div>
                     </div>
@@ -388,26 +404,26 @@
         <section class="section" id="services" aria-labelledby="services-heading">
             <div class="container">
                 <div class="section-heading">
-                    <span class="eyebrow sa-fade-up">What I offer</span>
-                    <h2 id="services-heading" class="sa-fade-up" data-delay="70">Services available for hire.</h2>
-                    <p class="sa-fade-up" data-delay="140">Each service is available independently or as a combined package for clients who need more than one thing done well.</p>
+                    <span class="eyebrow sa-fade-up">Engineering Services</span>
+                    <h2 id="services-heading" class="sa-fade-up" data-delay="70">Capabilities &amp; Technical Engagements</h2>
+                    <p class="sa-fade-up" data-delay="140">Available for remote engineering roles, backend API architectures, e-commerce builds, and technical performance optimization.</p>
                 </div>
 
                 <div class="cv-services-row">
                     <div class="cv-service-item sa-pop" data-delay="0">
                         <div class="cv-service-num">01</div>
-                        <h3>Business &amp; Web App Development</h3>
-                        <p>Starter websites from &#8358;250,000. Business builds from &#8358;750,000. Custom Laravel apps, admin dashboards and API integrations from &#8358;2,000,000 (quoted on scope). Laravel-first, built for performance and longevity.</p>
+                        <h3>Full Stack Web Applications</h3>
+                        <p>End-to-end development of production web platforms using Laravel, PHP, JavaScript, and MySQL. Normalized schema modeling, authenticated sessions, role-based controls, and responsive UI delivery.</p>
                     </div>
                     <div class="cv-service-item sa-pop" data-delay="100">
                         <div class="cv-service-num">02</div>
-                        <h3>Technical SEO &amp; AI SEO</h3>
-                        <p>Audit, fix, and future-proof your site's search presence. This includes Core Web Vitals, schema markup, and structuring your content to get cited by AI search systems like Google AI Overviews and ChatGPT.</p>
+                        <h3>Fintech, Payments &amp; APIs</h3>
+                        <p>Payment gateway integrations (Paystack, Monnify), webhook listener architecture, asynchronous background jobs, digital wallet accounting, and reliable third-party API connectivity.</p>
                     </div>
                     <div class="cv-service-item sa-pop" data-delay="200">
                         <div class="cv-service-num">03</div>
-                        <h3>Social Media Management</h3>
-                        <p>Content strategy, posting schedule, copywriting, and monthly analytics. Works best as a retainer for brands that want consistent, on-brand output without doing it all themselves.</p>
+                        <h3>Technical SEO &amp; Performance</h3>
+                        <p>Comprehensive technical audits, Core Web Vitals remediation, Schema.org structured data implementation, and search-optimized semantic HTML to drive organic visibility.</p>
                     </div>
                 </div>
             </div>
@@ -420,41 +436,40 @@
         <section class="section" id="faq" aria-labelledby="faq-heading">
             <div class="container">
                 <div class="section-heading">
-                    <span class="eyebrow sa-fade-up">FAQ</span>
-                    <h2 id="faq-heading" class="sa-fade-up" data-delay="70">Common questions.</h2>
+                    <span class="eyebrow sa-fade-up">Frequently Asked Questions</span>
+                    <h2 id="faq-heading" class="sa-fade-up" data-delay="70">Quick Answers for Hiring Teams</h2>
                 </div>
 
                 <div class="cv-faq-grid">
 
                     <div class="cv-faq-item sa-slide-up" data-delay="0">
                         <h3>What does Toluwalope Oyelola do?</h3>
-                        <!-- AI SEO: standalone extractable answer (under 60 words) -->
-                        <p>Toluwalope Samuel Oyelola is a remote Full Stack Web Developer, Social Media Manager, and SEO Specialist based in Nigeria. He builds production-grade web applications with Laravel, PHP, and MySQL, manages brand social accounts, and does technical and AI-era SEO for client websites.</p>
+                        <p>Toluwalope Samuel Oyelola is a Full Stack Developer working remotely worldwide. He specializes in Laravel, PHP, JavaScript, and MySQL, building reliable web applications, e-commerce storefronts, and fintech payment solutions.</p>
                     </div>
 
                     <div class="cv-faq-item sa-slide-up" data-delay="80">
                         <h3>Is Toluwalope Oyelola available for remote work?</h3>
-                        <p>Yes — remote only. He is open to full-time remote positions and freelance or contract engagements globally. He can be reached at toluoyelola066@gmail.com or via the contact page at tolu.tconnect.com.ng/contact.html.</p>
+                        <p>Yes. He is available for remote full-time positions and contract web engineering opportunities globally. He can be reached directly via email at toluoyelola066@gmail.com.</p>
                     </div>
 
                     <div class="cv-faq-item sa-slide-up" data-delay="160">
-                        <h3>What is his main tech stack?</h3>
-                        <p>His primary development stack is Laravel, PHP, JavaScript, HTML, CSS, and MySQL. He builds RESTful APIs, admin dashboards, e-commerce systems, and fintech platforms. He has been working with this stack since 2021.</p>
+                        <h3>What is his core technical stack?</h3>
+                        <p>His primary development stack comprises Laravel (PHP), modern JavaScript (ES6+), MySQL, HTML5, CSS3, and Bootstrap, with deep experience in RESTful APIs, webhooks, and third-party payment integrations.</p>
                     </div>
 
                     <div class="cv-faq-item sa-slide-up" data-delay="240">
-                        <h3>What does his SEO service include?</h3>
-                        <p>His SEO work covers technical audits, Core Web Vitals fixes, schema markup implementation, on-page optimisation, and AI SEO — structuring content so it gets cited by Google AI Overviews, ChatGPT, Perplexity, and similar AI search systems. This is integrated into every web project he builds.</p>
+                        <h3>What does his technical SEO expertise cover?</h3>
+                        <p>His SEO work encompasses comprehensive technical audits, Core Web Vitals optimization, Schema.org structured data markup, and search crawlability enhancements, proven across 20+ international business websites.</p>
                     </div>
 
                     <div class="cv-faq-item sa-slide-up" data-delay="0">
-                        <h3>What projects has he built?</h3>
-                        <p>He built TConnect — a fintech VTU platform with secure transaction flow, user wallet management, real-time digital payments, and a full admin control panel, built with Laravel, PHP, and MySQL. He also delivered e-commerce storefronts for AAIPhones and Dlite, and a bakery ordering prototype.</p>
+                        <h3>What production platforms has he delivered?</h3>
+                        <p>Key systems include TConnect (a production fintech VTU platform that processed over 3,000 transactions), AAIPhones (device e-commerce platform), Aimuj (multi-category online store built in 14 days), and EduPulse (school management portal).</p>
                     </div>
 
                     <div class="cv-faq-item sa-slide-up" data-delay="80">
-                        <h3>How much does he charge for a website?</h3>
-                        <p>Pricing is tiered: starter business websites from &#8358;250,000 (3–5 pages, responsive, on-page SEO, speed optimization), business builds from &#8358;750,000 (CMS, integrations, technical SEO), and custom Laravel apps, admin dashboards or ecommerce platforms from &#8358;2,000,000 — final quote based on project scope.</p>
+                        <h3>What is his educational background?</h3>
+                        <p>He is currently pursuing a B.Sc. in Computer Science via Ahmadu Bello University Distance Learning and holds a Frontend Web Development Certification from Kadahive Innovation and Tech Hub.</p>
                     </div>
 
                 </div>
@@ -468,19 +483,19 @@
         <section class="section cv-cta-section">
             <div class="container">
                 <div class="cv-cta-block sa-fade-up">
-                    <span class="eyebrow">Let's work together</span>
-                    <h2>Have a project, role, or brief?</h2>
-                    <p>Send me the details and I'll reply with a clear next step — usually within 24 hours.</p>
+                    <span class="eyebrow">Engineering Recruitment &amp; Contracts</span>
+                    <h2>Considering me for your engineering team?</h2>
+                    <p>Reach out to discuss full-time remote roles, backend architecture, or contract web development.</p>
                     <div class="cv-cta-actions">
-                        <a class="btn-main" href="contact.html" id="cv-cta-bottom">Send project details</a>
-                        <a class="btn-secondary" href="mailto:toluoyelola066@gmail.com">toluoyelola066@gmail.com</a>
+                        <a class="btn-main" href="contact.html" id="cv-cta-bottom">Contact Me</a>
+                        <a class="btn-secondary" href="mailto:toluoyelola066@gmail.com">Send an Email &rarr;</a>
                     </div>
                     <div class="cv-cta-links">
                         <a href="https://github.com/Tolu-max" target="_blank" rel="noreferrer" class="cv-text-link">GitHub</a>
                         <span aria-hidden="true">·</span>
                         <a href="https://www.linkedin.com/in/tolu-oyelola-797154391" target="_blank" rel="noreferrer" class="cv-text-link">LinkedIn</a>
                         <span aria-hidden="true">·</span>
-                        <a href="work.html" class="cv-text-link">View work</a>
+                        <a href="work.html" class="cv-text-link">View Projects</a>
                     </div>
                 </div>
             </div>
@@ -495,14 +510,14 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <h2>Toluwalope<br>Oyelola</h2>
-                        <p>Full Stack Web Developer · Social Media Manager · SEO Specialist</p>
+                        <p>Full Stack Developer specializing in Laravel, PHP, JavaScript, and MySQL.</p>
                     </div>
                     <div class="footer-links">
                         <h3 class="mono">Explore</h3>
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="work.html">Work</a></li>
-                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
@@ -518,14 +533,14 @@
                         <h3 class="mono">Contact</h3>
                         <ul>
                             <li><a href="mailto:toluoyelola066@gmail.com">toluoyelola066@gmail.com</a></li>
-                            <li><a href="tel:+2348083723613">+234 808 372 3613</a></li>
-                            <li>Remote only</li>
+                            <li><a href="tel:+2348083723613">08083723613</a></li>
+                            <li>Remote worldwide</li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-bottom">
                     <span>&copy; 2026 Toluwalope Samuel Oyelola. All rights reserved.</span>
-                    <span>Last updated: April 2026</span>
+                    <span>Full Stack Developer · Remote Worldwide</span>
                 </div>
             </div>
         </div>

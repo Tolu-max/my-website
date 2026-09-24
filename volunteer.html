@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Work — Toluwalope Oyelola</title>
     <meta name="description" content="Volunteer work by Toluwalope Oyelola — community-focused web projects built with modern responsive execution.">
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/volunteer.html">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/volunteer.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Volunteer Work — Toluwalope Oyelola">
     <meta property="og:description" content="Community-focused web projects built with modern responsive execution.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/volunteer.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta property="og:url" content="https://toluoyelola.cv/volunteer.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Volunteer Work — Toluwalope Oyelola">
     <meta name="twitter:description" content="Community-focused web projects built with modern responsive execution.">
-    <meta name="twitter:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta name="twitter:image" content="https://toluoyelola.cv/img/tconnect.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,28 +98,31 @@
     <main class="section">
         <div class="container page-shell">
             <header class="page-header sa-fade-up">
-                <span class="eyebrow">Volunteer work</span>
-                <h1 class="page-title sa-word">Community projects, built like client work.</h1>
-                <p class="page-subtitle sa-slide-up">Good digital experiences shouldn't be reserved only for commercial projects. I treat volunteer builds with the same care.</p>
+                <span class="eyebrow">Community Contributions</span>
+                <h1 class="page-title sa-word">Pro-Bono &amp; Applied Projects</h1>
+                <p class="page-subtitle sa-slide-up">Applying production-grade engineering standards to community initiatives and brand websites.</p>
             </header>
 
             <section class="two-column sa-stagger-row">
                 <article class="bento-item sa-stagger-item">
                     <div class="panel-header">
-                        <span class="eyebrow">Volunteer build</span>
+                        <span class="eyebrow">Pro-Bono Web Build</span>
                         <span class="pill">Live</span>
                     </div>
                     <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 8px 0; letter-spacing: -0.015em;">Khadee</h3>
                     <div class="project-media" style="margin: 8px 0;">
                         <img src="img/Khadee.png" alt="Khadee volunteer project preview" loading="lazy" decoding="async">
                     </div>
-                    <p class="body-copy">Designed and deployed a responsive brand website with a cleaner, more modern presentation — built pro bono.</p>
-                    <a class="btn-secondary" href="https://khadee-sigma.vercel.app/" target="_blank" rel="noreferrer" style="margin-top: auto;">View live ↗</a>
+                    <p class="body-copy">Engineered and launched a responsive brand showcase website with lightweight CSS, semantic HTML5, and mobile-optimized asset loading for a local creative initiative.</p>
+                    <a class="btn-secondary" href="https://khadee-sigma.vercel.app/" target="_blank" rel="noreferrer" style="margin-top: auto;">View Live Project &nearr;</a>
                 </article>
                 <article class="contact-card sa-stagger-item">
-                    <span class="eyebrow">Why it matters</span>
-                    <h3>Volunteer work still deserves strong execution.</h3>
-                    <p class="body-copy">I use these projects to support people, sharpen ideas, and prove that thoughtful design and careful development can create value beyond paid engagements.</p>
+                    <span class="eyebrow">Technical Approach</span>
+                    <h3>High Standards for Every Engagement</h3>
+                    <p class="body-copy">Whether delivering commercial web applications or community pro-bono builds, I maintain the same discipline: clean code structure, responsive layouts across device viewports, fast load times, and clear information architecture.</p>
+                    <div style="margin-top: 20px;">
+                        <a class="btn-main" href="contact.html">Contact Me</a>
+                    </div>
                 </article>
             </section>
         </div>

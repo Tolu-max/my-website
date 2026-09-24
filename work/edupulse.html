@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPulse School Management — Case Study by Toluwalope Oyelola</title>
+    <meta name="description" content="Technical case study of EduPulse: A collaborative school management system with Node.js, Express, MySQL, JWT authentication, and role-based permissions.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/work/edupulse.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="EduPulse Platform Technical Case Study — Toluwalope Oyelola">
+    <meta property="og:description" content="Team engineering: Backend lead responsible for Node.js REST APIs, relational schemas, and student records.">
+    <meta property="og:url" content="https://toluoyelola.cv/work/edupulse.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/edupulse.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- PAGE PRELOADER -->
+    <div id="page-preloader">
+        <div class="preloader-symbol">T</div>
+        <div class="preloader-counter" id="preloader-counter">0%</div>
+        <div class="preloader-bar-wrap">
+            <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- TOP SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
+
+
+
+    <!-- CUSTOM INTERACTIVE CURSOR -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-follower" id="cursor-follower"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="brand" aria-label="Toluwalope Oyelola Homepage">
+
+                <div class="brand-text">
+                    <strong>Toluwalope Oyelola</strong>
+                    <span>Full Stack Developer</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary Navigation">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../work.html" class="nav-link active">Work</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="../contact.html" class="btn-primary">Get in touch</a>
+                <button type="button" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-drawer" id="mobile-drawer">
+        <a href="../index.html">Home</a>
+        <a href="../work.html">Work &amp; Case Studies</a>
+        <a href="../about.html">About &amp; Background</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+
+    <main>
+        <article>
+            <header class="case-study-header">
+                <div class="container">
+                    <a href="../work.html" class="arrow-link" style="margin-bottom: 20px; display: inline-block;">&larr; Back to Work</a>
+                    <br>
+                    <span class="eyebrow eyebrow-active">Team Collaboration &bull; EdTech</span>
+                    <h1 class="case-study-title">EduPulse School Management Platform</h1>
+                    <p class="case-study-lead">
+                        A collaborative school administration Full-Stack Developered to streamline student records, attendance monitoring, grade calculations, and multi-tier user role permissions.
+                    </p>
+
+                    <div class="case-meta-grid">
+                        <div class="case-meta-item">
+                            <span>My Role</span>
+                            <strong>Backend Lead Engineer</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Team Structure</span>
+                            <strong>Distributed Engineering Team</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Stack</span>
+                            <strong>Node.js, Express, MySQL, REST</strong>
+                        </div>
+                        <div class="case-meta-item">
+                            <span>Frontend Demo</span>
+                            <strong><a href="https://edu-pulse-jet.vercel.app/" target="_blank" rel="noopener" class="text-link">edu-pulse-jet.vercel.app &nearr;</a></strong>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container case-body">
+                <div class="case-hero-media" style="border: 1px solid var(--line-strong); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 48px;">
+                    <img src="../img/edupulse.png" alt="EduPulse platform interface" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                </div>
+
+                <section class="case-section">
+                    <h2>01 / Collaborative Project Scope</h2>
+                    <p>
+                        EduPulse was built as a multi-developer team initiative to tackle administration inefficiencies in primary and secondary schools. The application provides dedicated views and capabilities for school owners, teachers, students, and parents.
+                    </p>
+                    <p>
+                        As the Backend Lead, I was specifically responsible for architecting the relational database schema, authoring the RESTful API endpoints, and implementing token-based authentication with role-based access control (RBAC).
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h2>02 / Core Backend Responsibilities</h2>
+                    <div class="feature-list">
+                        <div class="feature-list-item">
+                            <span>Authentication &amp; RBAC</span>
+                            <span>Secured JWT session workflows with distinct permission gates for administrators, instructors, and student/parent accounts.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Student Records API</span>
+                            <span>Comprehensive endpoints for profile management, class enrollment mappings, attendance records, and term-by-term grade entry.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Database Modeling</span>
+                            <span>Structured relational MySQL schema maintaining data integrity across academic years, terms, courses, assessments, and grade point averages.</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <span>Frontend Integration</span>
+                            <span>Coordinated closely with frontend engineers to define consistent JSON payload contracts and error handling patterns.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div style="padding: 32px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 48px;">
+                    <a href="tconnect.html" class="arrow-link">&larr; Back to TConnect Case Study</a>
+                    <a href="https://edu-pulse-jet.vercel.app/" target="_blank" rel="noopener" class="btn-primary">View Frontend App Preview &nearr;</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Toluwalope Samuel Oyelola</h3>
+                    <p>Full-stack &amp; product engineer building resilient backend systems, database schemas, and digital interfaces.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../work.html">Work</a></li>
+                            <li><a href="../about.html">About</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Case Studies</h4>
+                        <ul>
+                            <li><a href="tconnect.html">TConnect VTU</a></li>
+                            <li><a href="aimuj.html">Aimuj Platform</a></li>
+                            <li><a href="edupulse.html">EduPulse EdTech</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Channels</h4>
+                        <ul>
+                            <li><a href="https://github.com/Tolu-max" target="_blank" rel="noopener">GitHub &nearr;</a></li>
+                            <li><a href="https://www.linkedin.com/in/tolu-oyelola-797154391" target="_blank" rel="noopener">LinkedIn &nearr;</a></li>
+                            <li><a href="mailto:toluoyelola066@gmail.com">Email Direct</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Toluwalope Samuel Oyelola. Built with intentional simplicity.</span>
+                <span>Available for Remote Roles Worldwide</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

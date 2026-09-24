@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills — Toluwalope Oyelola</title>
-    <meta name="description" content="Technical capabilities of Toluwalope Oyelola across backend, frontend and SEO.">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/skills.html">
+    <title>Laravel &amp; Full-Stack Developer Skills | Toluwalope Oyelola</title>
+    <meta name="description" content="Explore Toluwalope Oyelola's skills in Laravel, PHP, JavaScript, MySQL, APIs, e-commerce integrations, and web deployment.">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/skills.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Skills — Toluwalope Oyelola">
     <meta property="og:description" content="Skills across backend, frontend and SEO.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/skills.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta property="og:url" content="https://toluoyelola.cv/skills.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Skills — Toluwalope Oyelola">
     <meta name="twitter:description" content="Skills across backend, frontend and SEO.">
-    <meta name="twitter:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta name="twitter:image" content="https://toluoyelola.cv/img/tconnect.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,60 +97,70 @@
     <main class="section">
         <div class="container page-shell">
             <header class="page-header sa-fade-up">
-                <span class="eyebrow">Skills</span>
-                <h1 class="page-title sa-word">A focused stack for product and growth work.</h1>
-                <p class="page-subtitle sa-slide-up">The tools and capabilities I lean on when building websites, web apps and technically solid marketing surfaces.</p>
+                <span class="eyebrow">Technical Competencies</span>
+                <h1 class="page-title sa-word">Core Skills &amp; Engineering Toolkit</h1>
+                <p class="page-subtitle sa-slide-up">A focused, production-tested stack prioritized for building secure web applications, high-performance backends, and maintainable user interfaces.</p>
             </header>
 
             <section class="three-column sa-stagger-row">
                 <article class="info-card sa-stagger-item">
-                    <span class="eyebrow">Backend &amp; platforms</span>
-                    <h3>Systems &amp; logic</h3>
+                    <span class="eyebrow">Backend &amp; Databases</span>
+                    <h3>Server-Side Engineering</h3>
+                    <p class="body-copy" style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Relational data modeling, secure authentication, background jobs, and REST API development.</p>
                     <div class="pill-group" style="margin-top: 10px;">
                         <span class="pill">PHP</span>
                         <span class="pill">Laravel</span>
+                        <span class="pill">MySQL</span>
                         <span class="pill">Node.js</span>
+                        <span class="pill">Express</span>
+                        <span class="pill">RESTful APIs</span>
+                        <span class="pill">Eloquent ORM</span>
+                    </div>
+                </article>
+                <article class="info-card sa-stagger-item">
+                    <span class="eyebrow">Frontend Architecture</span>
+                    <h3>Interfaces &amp; State</h3>
+                    <p class="body-copy" style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Semantic structure, mobile-first responsive systems, DOM manipulation, and dynamic client-side state.</p>
+                    <div class="pill-group" style="margin-top: 10px;">
+                        <span class="pill">JavaScript (ES6+)</span>
+                        <span class="pill">HTML5</span>
+                        <span class="pill">CSS3 / Flexbox / Grid</span>
+                        <span class="pill">Blade Templating</span>
+                        <span class="pill">Bootstrap</span>
+                        <span class="pill">jQuery</span>
+                    </div>
+                </article>
+                <article class="info-card sa-stagger-item">
+                    <span class="eyebrow">Platforms &amp; Delivery</span>
+                    <h3>CMS, E-Commerce &amp; SEO</h3>
+                    <p class="body-copy" style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">WordPress &amp; Shopify storefront setups, payment gateways, webhook listeners, and Core Web Vitals SEO.</p>
+                    <div class="pill-group" style="margin-top: 10px;">
                         <span class="pill">WordPress</span>
                         <span class="pill">Shopify</span>
-                        <span class="pill">MySQL</span>
-                    </div>
-                </article>
-                <article class="info-card sa-stagger-item">
-                    <span class="eyebrow">Frontend</span>
-                    <h3>Interfaces &amp; responsiveness</h3>
-                    <div class="pill-group" style="margin-top: 10px;">
-                        <span class="pill">React</span>
-                        <span class="pill">HTML</span>
-                        <span class="pill">CSS</span>
-                        <span class="pill">JavaScript</span>
-                    </div>
-                </article>
-                <article class="info-card sa-stagger-item">
-                    <span class="eyebrow">Digital &amp; growth</span>
-                    <h3>Visibility &amp; content</h3>
-                    <div class="pill-group" style="margin-top: 10px;">
+                        <span class="pill">Paystack API</span>
+                        <span class="pill">Monnify API</span>
+                        <span class="pill">Webhooks</span>
                         <span class="pill">Technical SEO</span>
-                        <span class="pill">On-page SEO</span>
-                        <span class="pill">Social media</span>
+                        <span class="pill">Core Web Vitals</span>
                     </div>
                 </article>
             </section>
 
             <section class="recruiter-grid sa-fade-up" style="margin-top: 32px;">
                 <article class="info-card">
-                    <span class="eyebrow">Extended toolkit</span>
-                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin: 10px 0; letter-spacing: -0.015em;">Also good with</h3>
+                    <span class="eyebrow">Development Workflow</span>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin: 10px 0; letter-spacing: -0.015em;">Tools &amp; Version Control</h3>
                     <div class="pill-group" style="margin-top: 10px;">
-                        <span class="pill">REST APIs</span>
-                        <span class="pill">Technical audits</span>
-                        <span class="pill">Git / GitHub</span>
-                        <span class="pill">Canva</span>
+                        <span class="pill">Git &amp; GitHub</span>
+                        <span class="pill">Postman API Testing</span>
+                        <span class="pill">Linux / VPS Hosting</span>
+                        <span class="pill">Google Search Console</span>
                     </div>
                 </article>
                 <article class="contact-card">
-                    <span class="eyebrow">How I use them</span>
-                    <h3>The right stack for the job.</h3>
-                    <p class="body-copy">I care less about collecting tools and more about using the right ones to make the final product faster, clearer and easier to grow.</p>
+                    <span class="eyebrow">Engineering Philosophy</span>
+                    <h3>Built for Production Reliability</h3>
+                    <p class="body-copy">I focus on writing clean, readable code with defensible architecture, thorough input validation, and pragmatic database design that scales cleanly.</p>
                 </article>
             </section>
         </div>

@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education — Toluwalope Oyelola</title>
-    <meta name="description" content="Education and certifications of Toluwalope Oyelola — Computer Science and frontend development.">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/education.html">
+    <title>Education &amp; Certifications | Toluwalope Oyelola</title>
+    <meta name="description" content="Education, training, and software development certifications completed by Toluwalope Oyelola.">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/education.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Education — Toluwalope Oyelola">
     <meta property="og:description" content="Education and certifications of Toluwalope Oyelola.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/education.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta property="og:url" content="https://toluoyelola.cv/education.html">
+    <meta property="og:image" content="https://toluoyelola.cv/img/tconnect.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Education — Toluwalope Oyelola">
     <meta name="twitter:description" content="Education and certifications of Toluwalope Oyelola.">
-    <meta name="twitter:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <meta name="twitter:image" content="https://toluoyelola.cv/img/tconnect.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,23 +97,23 @@
     <main class="section">
         <div class="container page-shell">
             <header class="page-header sa-fade-up">
-                <span class="eyebrow">Education</span>
-                <h1 class="page-title sa-word">Formal learning backed by practical delivery.</h1>
-                <p class="page-subtitle sa-slide-up">My education combines academic study with applied training and self-driven project work.</p>
+                <span class="eyebrow">Academic &amp; Professional Qualifications</span>
+                <h1 class="page-title sa-word">Education &amp; Certifications</h1>
+                <p class="page-subtitle sa-slide-up">Academic study in computer science complemented by structured technical training and continuous real-world project execution.</p>
             </header>
 
             <section class="two-column sa-stagger-row">
                 <article class="timeline-card sa-stagger-item">
-                    <span class="eyebrow">Degree</span>
-                    <h3>B.Sc Computer Science</h3>
-                    <p class="body-copy"><strong>Ahmadu Bello University</strong> — In progress</p>
-                    <p class="body-copy">Continued focus on software fundamentals, algorithms and technical problem solving.</p>
+                    <span class="eyebrow">Degree Program · 2025 – Present</span>
+                    <h3>B.Sc. Computer Science (In Progress)</h3>
+                    <p class="body-copy"><strong>Ahmadu Bello University Distance Learning</strong></p>
+                    <p class="body-copy">Undergraduate curriculum focused on core computing principles, data structures, algorithms, systems architecture, and mathematical problem-solving.</p>
                 </article>
                 <article class="timeline-card sa-stagger-item">
-                    <span class="eyebrow">Certification</span>
-                    <h3>Frontend Development</h3>
-                    <p class="body-copy"><strong>Kadahive Innovation</strong></p>
-                    <p class="body-copy">Practical frontend execution and modern web development foundations — HTML, CSS, JavaScript, responsive design.</p>
+                    <span class="eyebrow">Professional Certification · 2023</span>
+                    <h3>Frontend Web Development Certification</h3>
+                    <p class="body-copy"><strong>Kadahive Innovation and Tech Hub</strong></p>
+                    <p class="body-copy">Structured technical program covering responsive web architecture, DOM scripting, semantic HTML5, modern CSS3 styling, and JavaScript application fundamentals.</p>
                 </article>
             </section>
         </div>

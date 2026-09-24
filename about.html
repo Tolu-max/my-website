@@ -1,253 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    try {
+        if (sessionStorage.getItem('folio-intro-seen-v2') === '1') return;
+        sessionStorage.setItem('folio-intro-seen-v2', '1');
+    } catch (_) {
+        return;
+    }
+
+    document.documentElement.classList.add('folio-intro-active');
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Toluwalope Oyelola, Full Stack Developer</title>
-    <meta name="description" content="About Toluwalope Samuel Oyelola, a remote full stack developer building Laravel applications, ecommerce platforms, and SEO-ready business websites since 2021.">
-    <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://tolu.tconnect.com.ng/about.html">
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="About Toluwalope Oyelola">
-    <meta property="og:description" content="Full stack developer focused on high-performance, SEO-ready web builds for business growth.">
-    <meta property="og:url" content="https://tolu.tconnect.com.ng/about.html">
-    <meta property="og:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Toluwalope Oyelola">
-    <meta name="twitter:description" content="Remote full stack developer with Laravel, PHP, JavaScript, MySQL and technical SEO experience.">
-    <meta name="twitter:image" content="https://tolu.tconnect.com.ng/img/tconnect.png">
+    <title>About Toluwalope Oyelola | Full-Stack Developer</title>
+    <meta name="description" content="Meet Toluwalope Oyelola, a Nigerian full-stack developer. Read about his engineering background and work on Laravel products, online stores, and APIs.">
+    <meta name="theme-color" content="#f3f0e8">
+    <link rel="canonical" href="https://toluoyelola.cv/about.html">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        body { opacity: 0; }
-        .preloader { opacity: 1 !important; }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Toluwalope Samuel Oyelola",
-      "url": "https://tolu.tconnect.com.ng/about.html",
-      "jobTitle": ["Full Stack Web Developer", "Laravel Developer", "SEO-Focused Web Developer"],
-      "sameAs": [
-        "https://github.com/Tolu-max",
-        "https://www.linkedin.com/in/tolu-oyelola-797154391"
-      ],
-      "email": "mailto:toluoyelola066@gmail.com",
-      "telephone": "+2348083723613",
-      "knowsAbout": ["Laravel", "PHP", "JavaScript", "HTML", "CSS", "MySQL", "Technical SEO", "Website Performance"]
-    }
-    </script>
 </head>
 <body>
-    <div class="preloader" id="preloader" aria-hidden="true">
-        <svg class="loader-logo" viewBox="0 0 100 100" aria-hidden="true">
-            <rect x="18" y="18" width="64" height="64" rx="12" fill="none"/>
-            <text x="50" y="67" text-anchor="middle" font-size="40">T</text>
-        </svg>
-        <div class="loader-bar"><div class="loader-progress" id="loader-progress"></div></div>
-        <p class="loader-text" id="loader-text">Loading</p>
-    </div>
 
-    <header class="topbar" id="topbar">
-        <div class="container">
-            <div class="topbar-shell">
-                <a class="brand-lockup" href="index.html" aria-label="Toluwalope Samuel Oyelola — home">
-                    <span class="brand-mark">T</span>
-                    <span class="brand-copy">
-                        <strong>Toluwalope Oyelola</strong>
-                        <span>Full Stack Developer</span>
-                    </span>
-                </a>
-                <nav class="nav-island" aria-label="Primary navigation">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="work.html" class="nav-link">Work</a>
-                    <a href="about.html" class="nav-link active">About</a>
-                    <a href="blog.html" class="nav-link" data-nav="blog">Blog</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </nav>
-                <a class="btn-main topbar-cta hide-mobile" href="contact.html">Start a project</a>
-                <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <span class="menu-toggle-inner">
-                        <span class="menu-toggle-line"></span>
-                        <span class="menu-toggle-line"></span>
-                        <span class="menu-toggle-line"></span>
-                    </span>
+    <!-- TOP SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
+
+    <!-- SITE HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="Toluwalope Oyelola Homepage">
+
+                <div class="brand-text">
+                    <strong>Toluwalope Oyelola</strong>
+                    <span>Full Stack Developer</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="contact.html" class="btn-primary">Contact Me</a>
+                <button type="button" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-overlay"></div>
-        <nav class="mobile-menu-panel" aria-label="Mobile navigation">
-            <div class="mobile-menu-links">
-                <a href="index.html" class="mobile-menu-link">Home</a>
-                <a href="work.html" class="mobile-menu-link">Work</a>
-                <a href="about.html" class="mobile-menu-link active">About</a>
-                <a href="blog.html" class="mobile-menu-link" data-nav="blog">Blog</a>
-                <a href="contact.html" class="mobile-menu-link">Contact</a>
-            </div>
-        </nav>
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work &amp; Projects</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-drawer-cta">
+            <a href="contact.html" class="btn-primary" style="display: block; text-align: center;">Contact Me</a>
+        </div>
     </div>
 
-    <main class="section">
-        <div class="container page-shell">
-            <header class="page-header sa-fade-up">
-                <span class="eyebrow">The story</span>
-                <h1 class="page-title sa-word">Engineering with a business-first mindset.</h1>
-                <p class="page-subtitle sa-slide-up">
-                    I'm Toluwalope Samuel Oyelola — a remote full stack developer. Since 2021, I've been bridging complex engineering and practical business outcomes for fintech, ecommerce and service companies.
-                </p>
-            </header>
+    <main>
+        <!-- ABOUT BIO -->
+        <section class="section reveal-on-scroll">
+            <div class="container">
+                <div style="max-width: 760px;">
+                    <span class="eyebrow" style="margin-bottom: 14px;">Professional Profile</span>
+                    <h1 class="font-impact" style="font-size: clamp(2.4rem, 5vw, 3.4rem); line-height: 1.15; margin-bottom: 20px; color: var(--text);">
+                        Full stack web developer focused on robust backends, e-commerce, and APIs.
+                    </h1>
+                </div>
 
-            <section class="bento-grid sa-stagger-row">
-                <!-- Main Bio -->
-                <article class="bento-item sa-stagger-item" style="grid-column: span 8;">
-                    <div class="panel-header">
-                        <span class="eyebrow">Philosophy</span>
-                        <span class="pill">Execution over talk</span>
-                    </div>
-                    <div style="display: grid; gap: 20px;">
-                        <p class="body-copy" style="font-size: 1.25rem; line-height: 1.55; color: var(--text);">
-                            I don't just write code — I <strong style="color: var(--accent); font-weight: 600;">ship things that last</strong>. I built a Jumia-scale ecommerce platform solo in 2 weeks. I co-built EduPulse and owned the entire backend. That's how I work.
+                <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; margin-top: 28px; align-items: start;">
+                    <div>
+                        <p class="body-text" style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 16px; color: var(--text);">
+                            I am a Full Stack Developer with over two years of hands-on experience building production web applications, e-commerce platforms, and API-driven systems. My core technical foundation centers on Laravel, PHP, modern JavaScript, and MySQL.
                         </p>
-                        <p class="body-copy">
-                            My stack is Laravel, PHP, Node.js, JavaScript and MySQL. I care about performance, clean architecture and technical SEO — because a product nobody finds, or one that falls over under load, isn't worth shipping.
+                        <p class="body-text" style="font-size: 1rem; line-height: 1.7; margin-bottom: 16px;">
+                            My development work spans the entire application lifecycle — from architecting normalized database schemas and designing RESTful endpoints to implementing responsive user interfaces. As the founder and developer of TConnect, I built a fintech VTU platform that processed more than 3,000 utility transactions with automated wallet funding and webhook validation. Its production service is now offline; the case study documents the systems I built.
                         </p>
-                    </div>
-                </article>
+                        <p class="body-text" style="font-size: 1rem; line-height: 1.7; margin-bottom: 24px;">
+                            Alongside full stack engineering, I incorporate technical SEO best practices, Core Web Vitals optimization, and structured data into web builds to ensure applications are discoverable, performant, and maintainable.
+                        </p>
 
-                <!-- Status -->
-                <article class="bento-item sa-stagger-item contact-card" style="grid-column: span 4;">
-                    <div class="panel-header">
-                        <span class="eyebrow">Status</span>
-                        <span class="green-dot">Available</span>
-                    </div>
-                    <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 10px 0; letter-spacing: -0.015em;">Open for collaboration</h3>
-                    <ul class="mini-list">
-                        <li><span>Focus</span><span>Laravel · Node.js</span></li>
-                        <li><span>Mode</span><span>100% remote</span></li>
-                        <li><span>Location</span><span>Lagos, GMT+1</span></li>
-                        <li><span>Speed</span><span>Ships fast</span></li>
-                    </ul>
-                    <a class="btn-main" href="contact.html" style="margin-top: auto;">Start a project</a>
-                </article>
-
-                <!-- Proof points -->
-                <article class="bento-item sa-stagger-item" style="grid-column: span 4;">
-                    <span class="eyebrow">Proof of work</span>
-                    <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin: 12px 0; letter-spacing: -0.01em;">What I've shipped</h3>
-                    <ul class="mini-list">
-                        <li><span>Jumia Clone</span><span>Solo · 2 wks</span></li>
-                        <li><span>EduPulse</span><span>Backend lead</span></li>
-                        <li><span>TConnect</span><span>3,000+ tx</span></li>
-                        <li><span>AAIPhones</span><span>Ecommerce</span></li>
-                        <li><span>Dlite</span><span>Bakery MVP</span></li>
-                    </ul>
-                </article>
-
-                <!-- Stack -->
-                <article class="bento-item sa-stagger-item" style="grid-column: span 4;">
-                    <span class="eyebrow">Engineering stack</span>
-                    <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin: 12px 0; letter-spacing: -0.01em;">What I use</h3>
-                    <div class="stack-tags">
-                        <span class="stack-tag">PHP / Laravel</span>
-                        <span class="stack-tag">Node.js</span>
-                        <span class="stack-tag">JavaScript / React</span>
-                        <span class="stack-tag">MySQL</span>
-                        <span class="stack-tag">REST APIs</span>
-                        <span class="stack-tag">Git / GitHub</span>
-                    </div>
-                </article>
-
-                <!-- Why me -->
-                <article class="bento-item sa-stagger-item" style="grid-column: span 4;">
-                    <span class="eyebrow">The edge</span>
-                    <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin: 12px 0; letter-spacing: -0.01em;">Why work with me</h3>
-                    <ul class="mini-list">
-                        <li><span>Fast</span><span>14-day Jumia clone</span></li>
-                        <li><span>Full stack</span><span>Front / back / deploy</span></li>
-                        <li><span>SEO native</span><span>Day one</span></li>
-                        <li><span>Team ready</span><span>Co-built proven</span></li>
-                    </ul>
-                </article>
-
-                <!-- More about background -->
-                <article class="bento-item sa-stagger-item" style="grid-column: span 12;">
-                    <div class="panel-header">
-                        <span class="eyebrow">Background</span>
-                        <span class="pill">More detail</span>
-                    </div>
-                    <div class="two-column" style="margin-top: 8px; gap: 32px;">
-                        <div>
-                            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.015em;">Experience</h3>
-                            <p class="body-copy">Full stack developer at AAIPhones (2023–present), SEO specialist at Guru Web Design (2024–present), and lead frontend tutor at Kadahive Summer Classes (2025).</p>
-                            <a href="experience.html" class="project-link-cta" style="margin-top: 14px; display: inline-flex;">Full experience →</a>
-                        </div>
-                        <div>
-                            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.015em;">Education</h3>
-                            <p class="body-copy">B.Sc Computer Science (in progress) at Ahmadu Bello University, plus a frontend development certification from Kadahive Innovation.</p>
-                            <a href="education.html" class="project-link-cta" style="margin-top: 14px; display: inline-flex;">Education detail →</a>
+                        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                            <a href="Toluwalope Oyelola CV.pdf" target="_blank" rel="noopener" class="btn-primary">Download CV (PDF) &nearr;</a>
+                            <a href="https://github.com/Tolu-max" target="_blank" rel="noopener" class="btn-secondary">GitHub &nearr;</a>
                         </div>
                     </div>
-                </article>
-            </section>
-        </div>
+
+                    <!-- QUICK DETAILS -->
+                    <div class="about-overview">
+                        <h3 class="font-impact" style="font-size: 1.15rem; margin-bottom: 16px; color: var(--text);">Professional Overview</h3>
+
+                        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.92rem;">
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+                                <span style="color: var(--text-dim);">Location</span>
+                                <strong>Remote Worldwide</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+                                <span style="color: var(--text-dim);">Primary Stack</span>
+                                <strong>Laravel, PHP, JavaScript, MySQL</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+                                <span style="color: var(--text-dim);">Education</span>
+                                <strong>B.Sc. Computer Science (In Progress)</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+                                <span style="color: var(--text-dim);">Specialization</span>
+                                <strong>Web Apps, WordPress, Shopify, APIs</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-dim);">Availability</span>
+                                <strong>Full-Time Roles &amp; Contracts</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="section" style="background: var(--bg-alt); padding-top: 40px; padding-bottom: 40px;">
+            <div class="container">
+                <span class="eyebrow" style="margin-bottom: 20px;">Experience Timeline</span>
+                <div class="about-timeline" style="display: flex; flex-direction: column; gap: 0; border-left: 2px solid var(--line); margin-left: 12px;">
+
+                    <div class="about-timeline-item" style="position: relative; padding: 0 0 28px 28px;">
+                        <div style="position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent);"></div>
+                        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 4px;">Aug 2023 – Present</div>
+                        <div style="font-weight: 700; color: var(--text); margin-bottom: 3px;">Full Stack Developer &amp; Marketing Assistant — AAIPhones</div>
+                        <div style="font-size: 0.92rem; color: var(--text-muted);">Engineered and maintained an e-commerce platform for mobile devices. Implemented catalog management, navigation flows, bug fixes, and technical SEO structure to drive visibility and conversion.</div>
+                    </div>
+
+                    <div class="about-timeline-item" style="position: relative; padding: 0 0 28px 28px;">
+                        <div style="position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--line-strong);"></div>
+                        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 4px;">2024 – Present</div>
+                        <div style="font-weight: 700; color: var(--text); margin-bottom: 3px;">Founder &amp; Developer — TConnect</div>
+                        <div style="font-size: 0.92rem; color: var(--text-muted);">Built a fintech VTU platform with wallet systems, Monnify and Paystack payment integrations, and administrative monitoring dashboards. The production service is now offline.</div>
+                    </div>
+
+                    <div class="about-timeline-item" style="position: relative; padding: 0 0 28px 28px;">
+                        <div style="position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--line-strong);"></div>
+                        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 4px;">Sept 2024 – Mar 2026</div>
+                        <div style="font-weight: 700; color: var(--text); margin-bottom: 3px;">SEO Specialist — Guru Web Design &amp; SEO</div>
+                        <div style="font-size: 0.92rem; color: var(--text-muted);">Executed technical and local SEO strategies for 20+ international client websites, optimizing web performance, structured data, and search engine visibility.</div>
+                    </div>
+
+                    <div class="about-timeline-item" style="position: relative; padding: 0 0 0 28px;">
+                        <div style="position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--line-strong);"></div>
+                        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 4px;">2023</div>
+                        <div style="font-weight: 700; color: var(--text); margin-bottom: 3px;">Frontend Web Development Certification &amp; Applied Project Delivery</div>
+                        <div style="font-size: 0.92rem; color: var(--text-muted);">Completed structured training at Kadahive Innovation and Tech Hub and delivered real-world client builds including Aimuj (e-commerce) and EduPulse (school portal).</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT STRIP -->
+        <section class="section" style="border-bottom: none; padding-top: 0;">
+            <div class="container">
+                <div style="border: 1px solid var(--line); border-radius: var(--radius-md); background: #ffffff; padding: 28px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                    <div>
+                        <strong style="font-size: 1.1rem; color: var(--text);">Interested in working together?</strong>
+                        <p class="body-text" style="font-size: 0.92rem; margin: 4px 0 0;">Open to full-time remote roles and contract development opportunities.</p>
+                    </div>
+                    <a href="contact.html" class="btn-primary">Contact Me &rarr;</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="fat-footer">
+    <!-- SLEEK REDESIGNED FOOTER -->
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-shell">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <h2>Toluwalope<br>Oyelola</h2>
-                        <p>Full Stack Developer building business-ready websites and web apps. Laravel, PHP, JavaScript.</p>
-                    </div>
-                    <div class="footer-links">
-                        <h3 class="mono">Explore</h3>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="work.html">Work</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="cv.html">CV</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3 class="mono">Profiles</h3>
-                        <ul>
-                            <li><a href="https://github.com/Tolu-max" target="_blank" rel="noreferrer">GitHub</a></li>
-                            <li><a href="https://www.linkedin.com/in/tolu-oyelola-797154391" target="_blank" rel="noreferrer">LinkedIn</a></li>
-                            <li><a href="experience.html">Experience</a></li>
-                            <li><a href="projects.html">Project archive</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3 class="mono">Contact</h3>
-                        <ul>
-                            <li><a href="mailto:toluoyelola066@gmail.com">toluoyelola066@gmail.com</a></li>
-                            <li><a href="tel:+2348083723613">+234 808 372 3613</a></li>
-                            <li>Remote only · GMT+1</li>
-                        </ul>
-                    </div>
+            <div class="footer-hero-strip">
+                <div>
+                    <div class="footer-big-heading">Let's discuss engineering<br><span>opportunities.</span></div>
                 </div>
-                <div class="footer-bottom">
-                    <span>&copy; 2026 Toluwalope Samuel Oyelola. All rights reserved.</span>
-                    <span>Fast · Responsive · SEO-ready</span>
+                <div class="footer-cta-group">
+                    <a href="contact.html" class="footer-btn-primary">Get in Touch &rarr;</a>
+                    <a href="mailto:toluoyelola066@gmail.com" class="footer-btn-copy" style="text-decoration: none;">
+                        <span>Send an Email &rarr;</span>
+                    </a>
                 </div>
+            </div>
+
+            <div class="footer-columns-grid">
+                <div class="footer-brand-col">
+                    <div style="font-family: var(--font-impact); font-size: 1.25rem; font-weight: 800; color: #ffffff;">Toluwalope Samuel Oyelola</div>
+                    <p>Full Stack Developer specializing in Laravel, PHP, JavaScript, and MySQL. Building reliable production web applications and APIs.</p>
+                </div>
+                <div>
+                    <div class="footer-col-title">Navigation</div>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Work &amp; Projects</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Selected Work</div>
+                    <ul class="footer-nav-list">
+                        <li><a href="work/tconnect.html">TConnect VTU</a></li>
+                        <li><a href="work/aimuj.html">Aimuj Store</a></li>
+                        <li><a href="work/edupulse.html">EduPulse Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Connect</div>
+                    <ul class="footer-nav-list">
+                        <li><a href="https://github.com/Tolu-max" target="_blank" rel="noopener">GitHub &nearr;</a></li>
+                        <li><a href="https://www.linkedin.com/in/tolu-oyelola-797154391" target="_blank" rel="noopener">LinkedIn &nearr;</a></li>
+                        <li><a href="Toluwalope Oyelola CV.pdf" target="_blank" rel="noopener">Curriculum Vitae &nearr;</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 Toluwalope Samuel Oyelola. All rights reserved.</span>
+                <span>Crafted for high performance &bull; Remote Worldwide</span>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
 </body>
 </html>
