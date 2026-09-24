@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" fill="#0a0a0a"/>
-  <text x="50%" y="55%" font-family="monospace" font-weight="bold" font-size="60" fill="#00ff41" text-anchor="middle" dominant-baseline="middle">T</text>
-  <path d="M10 10 L30 10 M10 10 L10 30" stroke="#00ff41" stroke-width="5" fill="none"/>
-  <path d="M70 90 L90 90 M90 70 L90 90" stroke="#00ff41" stroke-width="5" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">TO — Toluwalope Oyelola</title>
+  <rect width="64" height="64" rx="16" fill="#0f172a"/>
+  <path d="M9 14h28v7H26v29h-7V21H9z" fill="#f8fafc"/>
+  <circle cx="44" cy="39" r="10" fill="none" stroke="#2563eb" stroke-width="6"/>
 </svg>
