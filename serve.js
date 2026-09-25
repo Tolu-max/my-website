@@ -4,6 +4,8 @@ const path = require('path');
 
 const PORT = Number(process.env.PORT) || 3000;
 const ROOT = __dirname;
+const CANONICAL_HOST = 'toluoyelola.cv';
+const WWW_HOST = `www.${CANONICAL_HOST}`;
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -24,6 +26,20 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
+  const requestHost = (req.headers.host || '').split(':')[0].toLowerCase();
+  if (requestHost === WWW_HOST) {
+    const canonicalUrl = new URL(req.url || '/', `https://${CANONICAL_HOST}`);
+    canonicalUrl.protocol = 'https:';
+    canonicalUrl.hostname = CANONICAL_HOST;
+    canonicalUrl.port = '';
+    res.writeHead(308, {
+      Location: canonicalUrl.href,
+      'Cache-Control': 'public, max-age=86400',
+    });
+    res.end();
+    return;
+  }
+
   let pathname;
   try {
     pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
