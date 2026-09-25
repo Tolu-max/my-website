@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.toluoyelola.cv"
+        }
+      ],
+      "destination": "https://toluoyelola.cv/:path*",
+      "permanent": true
+    }
+  ]
+}
