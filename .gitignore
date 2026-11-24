@@ -19,3 +19,7 @@ Desktop.ini
 node_modules/
 dist/
 build/
+
+# Backups and temporary files
+*.bak
+.agents/

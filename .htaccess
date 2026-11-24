@@ -1,0 +1,44 @@
+# ==============================================================================
+# Apache Configuration: Clean URLs (.html removal), HTTPS & Performance
+# ==============================================================================
+
+Options -MultiViews
+RewriteEngine On
+
+# 1. Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2. Redirect /index or /index.html to root /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index(\.html)?\ HTTP/
+RewriteRule ^(.*)index(\.html)?$ /$1 [R=301,L]
+
+# 3. Externally redirect direct *.html requests to clean URLs without .html
+# (e.g. /about.html -> /about)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# 4. Internally map extensionless requests to .html files if they exist
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# 5. Handle special subdirectories like /work if requested without trailing slash or as /work
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# 6. Custom 404 Error Document
+ErrorDocument 404 /404.html
+
+# 7. Browser Caching & Compression
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 month"
+</IfModule>
